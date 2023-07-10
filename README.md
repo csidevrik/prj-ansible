@@ -52,8 +52,9 @@ Si todo está configurado correctamente, deberías poder conectarte sin necesida
 4. Configura el archivo de inventario de Ansible para incluir la dirección IP o el nombre del nodo remoto y la conexión SSH. Por ejemplo:
 
 
-[nodos-remotos]
+
 ```shell
+[nodos-remotos]
 nodo-remoto ansible_host=<dirección-IP> ansible_user=<usuario-remoto>
 ```
 Asegúrate de reemplazar <dirección-IP> y <usuario-remoto> con los valores correspondientes para tu configuración.
