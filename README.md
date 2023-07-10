@@ -31,12 +31,43 @@ Ya que este ser[a] el nodo controlado debe tener activo ssh para poder conectars
 ### Pasos sobre el nodo controler
 
 
+Para administrar un nodo remoto con Ansible, necesitarás compartir la clave SSH del controlador Ansible con el nodo remoto. Aquí tienes los pasos generales para hacerlo:
+
+1. Genera un par de claves SSH en tu controlador Ansible, si aún no lo has hecho. Puedes hacerlo utilizando el comando ssh-keygen en tu máquina local. Esto generará una clave pública y una clave privada.
+
+2. Copia la clave pública (archivo .pub) a tu nodo remoto. Puedes hacerlo utilizando el comando ssh-copy-id. Por ejemplo:
+
+```shell
+ssh-copy-id user@nodo-remoto
+```
+Esto copiará tu clave pública al nodo remoto y la agregará al archivo ~/.ssh/authorized_keys en el nodo.
+
+3. Verifica que puedes conectarte al nodo remoto sin ingresar una contraseña. Puedes probarlo ejecutando:
+
+```shell
+ssh user@nodo-remoto
+```
+Si todo está configurado correctamente, deberías poder conectarte sin necesidad de ingresar una contraseña.
+
+4. Configura el archivo de inventario de Ansible para incluir la dirección IP o el nombre del nodo remoto y la conexión SSH. Por ejemplo:
+
+
+[nodos-remotos]
+```shell
+nodo-remoto ansible_host=<dirección-IP> ansible_user=<usuario-remoto>
+```
+Asegúrate de reemplazar <dirección-IP> y <usuario-remoto> con los valores correspondientes para tu configuración.
+
+Una vez que hayas realizado estos pasos, puedes ejecutar comandos de Ansible para administrar el nodo remoto utilizando la conexión SSH establecida. Por ejemplo, puedes ejecutar un playbook de Ansible en el nodo remoto utilizando el siguiente comando:
+
+```shell
+ansible-playbook -i inventario playbook.yml
+```
+Recuerda ajustar el nombre del archivo de inventario y el playbook (playbook.yml) según corresponda a tu configuración.
+
+Estos son los pasos básicos para compartir la clave SSH y administrar un nodo remoto con Ansible. Recuerda seguir las mejores prácticas de seguridad y asegurarte de proteger adecuadamente las claves privadas y las conexiones SSH en tu entorno.
+
 
 
 - [Bashly framework](https://bashly.dannyb.co/)
 
-
-@startuml
-Bob -[#red]> Alice : hello
-Alice -[#0000FF]->Bob : ok
-@enduml
