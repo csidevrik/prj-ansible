@@ -1,0 +1,2 @@
+[nodos-remotos]
+fed37-remoto ansible_host=192.168.18.65 ansible_user=humancero
