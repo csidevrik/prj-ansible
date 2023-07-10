@@ -14,11 +14,11 @@ En general esta libre de descarga para las distintas plaltaformas pero de moment
 ### Ubuntu
 ```shell
 sudo apt install ansible
-
+```
 ### Fedora
 ```shell
 sudo dnf install ansible
-
+```
 
 
 - [Bashly framework](https://bashly.dannyb.co/)
