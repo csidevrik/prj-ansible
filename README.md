@@ -24,3 +24,7 @@ sudo dnf install ansible
 - [Bashly framework](https://bashly.dannyb.co/)
 
 
+@startuml
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+@enduml
