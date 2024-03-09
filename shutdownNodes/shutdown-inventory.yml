@@ -1,0 +1,19 @@
+---
+- name: Playbook shutdown inventory
+  hosts: nodos-remotos
+  become: true
+  tasks:
+    - name: Tarea para servidor userver
+      debug:
+        msg: "Esta es una tarea para {{ inventory_hostname }}"
+      when: inventory_hostname == "userver"
+
+    - name: Tarea para servidor fserver
+      debug:
+        msg: "Esta es una tarea para {{ inventory_hostname }}"
+      when: inventory_hostname == "fserver"
+    # - name: Instala nginx on fedora
+    #   dnf:
+    #     name: nginx
+    #     state: latest
+    #   become: true
