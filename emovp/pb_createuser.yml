@@ -23,7 +23,7 @@
     - name: Validar nivel de privilegio
       assert:
         that:
-          - privilege_level in ['operator', 'manager']
+          - privilege_level in ['operator', 'manager', 'Level-15']
         fail_msg: "Nivel de privilegio inválido. Use operator o manager"
 
     - name: Crear usuario local
