@@ -22,7 +22,7 @@
 
     - name: Crear usuario administrador
       cli_command:
-        command: 'aaa authentication local-user {{ username }} group Level-15 password sha1 {{ user_password }}'
+        command: "aaa authentication local-user {{ username }} group Level-15 password sha1 {{ user_password }}"
       register: user_output
 
     - name: Guardar configuración
