@@ -15,7 +15,7 @@
       confirm: yes
     
     - name: "privilege_level"
-      prompt: "Ingrese el nivel de privilegio (operator/manager)"
+      prompt: "Ingrese el nivel de privilegio (operator/manager/Level-15)"
       private: no
       default: "operator"
 
@@ -23,21 +23,27 @@
     - name: Validar nivel de privilegio
       assert:
         that:
-          - privilege_level in ['operator', 'manager']
-        fail_msg: "Nivel de privilegio inválido. Use operator o manager"
+          - privilege_level in ['operator', 'manager', 'Level-15']
+        fail_msg: "Nivel de privilegio inválido. Use operator, manager o Level-15"
+
+    - name: Configurar usuario
+      cli_command:
+        command: "configure terminal"
+      register: config_mode
 
     - name: Crear usuario local
       cli_command:
-        command: "{{ item }}"
-      loop:
-        - "configure terminal"
-        - "password {{ privilege_level }} user-name {{ username }} plaintext {{ user_password }}"
-        - "write memory"
-      register: output
+        command: aaa authentication local-user {{ username }} group {{ privilege_level }} password plaintext {{ user_password }}
+      register: create_output
+
+    - name: Guardar configuración
+      cli_command:
+        command: "write memory"
+      register: save_output
 
     - name: Verificar la creación
       cli_command:
-        command: "show authorization"
+        command: "show running-config | include {{ username }}"
       register: verify_output
 
     - name: Mostrar resultado
