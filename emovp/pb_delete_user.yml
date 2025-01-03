@@ -1,0 +1,22 @@
+---
+- name: Eliminar usuario de switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+  vars_prompt:
+    - name: "username"
+      prompt: "Ingrese el nombre del usuario a eliminar"
+      private: no
+
+  tasks:
+    - name: Eliminar usuario local
+      cli_command:
+        command: "{{ item }}"
+      loop:
+        - "configure"
+        - "no aaa authentication local-user {{ username }}"
+        - "write memory"
+      register: output
+
+    - name: Mostrar resultado
+      debug:
+        var: output.stdout_lines
