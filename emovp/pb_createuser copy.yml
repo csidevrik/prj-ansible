@@ -1,4 +1,3 @@
-# create_user.yml
 ---
 - name: Crear usuario en switches Aruba
   hosts: aruba_switches
@@ -26,21 +25,29 @@
           - privilege_level in ['operator', 'manager', 'Level-15']
         fail_msg: "Nivel de privilegio inválido. Use operator, manager o Level-15"
 
-    - name: Crear usuario local
+    - name: Crear usuario (operator/manager)
       cli_command:
-        command: "{{ item }}"
-      loop:
-        - "configure"
-        - "aaa authentication local-user {{ username }} group {{ privilege_level }} password plaintext {{ user_password }}"
-        - "write memory"
-      register: output
-      no_log: true  # Para no mostrar la contraseña en los logs
+        command: |
+          configure terminal
+          password {{ privilege_level }} user-name "{{ username }}" sha1 "{{ user_password }}"
+          write memory
+      when: privilege_level in ['operator', 'manager']
+      register: output_basic
 
-    - name: Verificar la creación del usuario
+    - name: Crear usuario (Level-15)
       cli_command:
-        command: "show authorization"
+        command: |
+          configure terminal
+          aaa authentication local-user "{{ username }}" group "Level-15" password sha1 "{{ user_password }}"
+          write memory
+      when: privilege_level == 'Level-15'
+      register: output_admin
+
+    - name: Verificar la creación
+      cli_command:
+        command: "show running-config | include {{ username }}"
       register: verify_output
 
-    - name: Mostrar resultado de la verificación
+    - name: Mostrar resultado
       debug:
         var: verify_output.stdout_lines
