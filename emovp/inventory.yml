@@ -7,12 +7,12 @@ all:
           ansible_user: "{{ vault_credentials.switch1.username }}"
           ansible_password: "{{ vault_credentials.switch1.password }}"
           ansible_connection: network_cli
-          ansible_network_os: aos_switch
+          ansible_network_os: aruba
           ansible_become: yes
         switch2:
           ansible_host: 10.32.99.1
           ansible_user: "{{ vault_credentials.switch2.username }}"
           ansible_password: "{{ vault_credentials.switch2.password }}"
           ansible_connection: network_cli
-          ansible_network_os: aos_switch
+          ansible_network_os: aruba
           ansible_become: yes
