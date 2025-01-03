@@ -34,22 +34,35 @@ XxmPERWUfLMlQBMEtLx6zpUn752cIAmfnVN1IHnzHQuahr5JOXO4qABvs6iOys9qYWFNHnp+4lnv+S3/
 ***
 
 ![alt text](equipo-key-ssh.png)
-## En tu computadora/servidor de gestión, necesitas instalar Ansible:
+## En tu computadora/servidor de gestión, necesitas instalar Ansible: y ciertas dependencias
 
 ### Para Linux (Ubuntu/Debian):
 ``` bash
 sudo apt update
 sudo apt install ansible
+pip install ansible-pylibssh 
+pip install paramiko
 ```
 ### Para RHEL/CentOS:
 ``` bash
 sudo yum install ansible
+pip install ansible-pylibssh 
+pip install paramiko
+```
+### Para Fedora:
+``` bash
+sudo dnf install ansible
+pip install ansible-pylibssh 
+pip install paramiko
 ```
 
 ## Instala la colección de Aruba para Ansible:
 
 ``` bash
+ansible-galaxy collection list | grep aruba
+ansible-galaxy collection install arubanetworks.aos_switch
 ansible-galaxy collection install arubanetworks.aoscx
+ansible-galaxy collection install arubanetworks.aruba_central 
 ``` 
 ## Crea un directorio para tu proyecto:
 

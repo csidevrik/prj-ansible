@@ -2,11 +2,12 @@
 - name: Test Connection to Aruba Switches
   hosts: aruba_switches
   gather_facts: no
+  connection: network_cli
   
   tasks:
     - name: Run show version
       aruba_command:
-        commands:
+        command:
           - show version
       register: version_output
 
