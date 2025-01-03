@@ -1,0 +1,15 @@
+---
+- name: Test Connection to Aruba Switches
+  hosts: aruba_switches
+  gather_facts: no
+  
+  tasks:
+    - name: Run show version
+      arubanetworks.aoscx.aoscx_command:
+        commands:
+          - show version
+      register: version_output
+
+    - name: Display version
+      debug:
+        var: version_output.stdout_lines
