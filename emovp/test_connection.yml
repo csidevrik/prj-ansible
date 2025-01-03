@@ -7,7 +7,7 @@
   tasks:
     - name: Run show version
       aruba_command:
-        command:
+        commands:
           - show version
       register: version_output
 
