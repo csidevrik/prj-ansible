@@ -1,0 +1,34 @@
+# create_admin.yml - Para usuarios Level-15
+---
+- name: Crear usuario administrador en switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+  
+  vars_prompt:
+    - name: "username"
+      prompt: "Ingrese el nombre del nuevo administrador"
+      private: no
+    
+    - name: "user_password"
+      prompt: "Ingrese la contraseña del administrador"
+      private: yes
+      confirm: yes
+
+  tasks:
+    - name: Crear usuario administrador
+      cli_command:
+        command: "{{ item }}"
+      loop:
+        - "configure terminal"
+        - "aaa authentication local-user {{ username }} group Level-15 password sha1 {{ user_password }}"
+        - "write memory"
+      register: output
+
+    - name: Verificar la creación
+      cli_command:
+        command: "show authorization"
+      register: verify_output
+
+    - name: Mostrar resultado
+      debug:
+        var: verify_output.stdout_lines
