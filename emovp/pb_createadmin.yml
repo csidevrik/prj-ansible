@@ -15,33 +15,23 @@
       confirm: yes
 
   tasks:
-    - name: Entrar en modo configuración
-      cli_command:
-        command: "configure"
+    - name: Generar hash SHA1 de la contraseña
+      command: "echo -n '{{ user_password }}' | sha1sum | cut -d' ' -f1"
+      register: password_hash
+      delegate_to: localhost
 
     - name: Configurar usuario administrador
       cli_command:
-        command: "aaa authentication local-user \"{{ username }}\" group \"Level-15\" password plaintext"
-        prompt:
-          - "New password for.*: "
-          - "Please retype new password for.*: "
-        answer:
-          - "{{ user_password }}"
-          - "{{ user_password }}"
+        command: |
+          configure
+          aaa authentication local-user "{{ username }}" group "Level-15" password sha1 "{{ password_hash.stdout }}"
+          end
+          write memory
       register: config_output
-
-    - name: Salir de modo configuración
-      cli_command:
-        command: "end"
-
-    - name: Guardar configuración
-      cli_command:
-        command: "write memory"
-      register: save_output
 
     - name: Verificar la creación
       cli_command:
-        command: 'show running-config | include "{{ username }}"'
+        command: "show running-config | include {{ username }}"
       register: verify_output
 
     - name: Mostrar resultado

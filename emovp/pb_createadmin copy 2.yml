@@ -1,0 +1,49 @@
+# create_admin.yml
+---
+- name: Crear usuario administrador en switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+  
+  vars_prompt:
+    - name: "username"
+      prompt: "Ingrese el nombre del nuevo administrador"
+      private: no
+    
+    - name: "user_password"
+      prompt: "Ingrese la contraseña del administrador"
+      private: yes
+      confirm: yes
+
+  tasks:
+    - name: Entrar en modo configuración
+      cli_command:
+        command: "configure"
+
+    - name: Configurar usuario administrador
+      cli_command:
+        command: "aaa authentication local-user \"{{ username }}\" group \"Level-15\" password plaintext"
+        prompt:
+          - "New password for.*: "
+          - "Please retype new password for.*: "
+        answer:
+          - "{{ user_password }}"
+          - "{{ user_password }}"
+      register: config_output
+
+    - name: Salir de modo configuración
+      cli_command:
+        command: "end"
+
+    - name: Guardar configuración
+      cli_command:
+        command: "write memory"
+      register: save_output
+
+    - name: Verificar la creación
+      cli_command:
+        command: 'show running-config | include "{{ username }}"'
+      register: verify_output
+
+    - name: Mostrar resultado
+      debug:
+        var: verify_output.stdout_lines
