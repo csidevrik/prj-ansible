@@ -17,12 +17,19 @@
   tasks:
     - name: Configurar usuario administrador
       cli_command:
-        command: |
-          configure terminal
-          aaa authentication local-user "{{ username }}" group "Level-15" password sha1 "{{ user_password }}"
-          write memory
-          exit
+        command: "aaa authentication local-user \"{{ username }}\" group \"Level-15\" password plaintext"
+        prompt:
+          - "New password for.*:"
+          - "Please retype new password for.*:"
+        answer:
+          - "{{ user_password }}"
+          - "{{ user_password }}"
       register: config_output
+
+    - name: Guardar configuración
+      cli_command:
+        command: "write memory"
+      register: save_output
 
     - name: Verificar la creación
       cli_command:
