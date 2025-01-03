@@ -1,0 +1,46 @@
+# create_user.yml
+---
+- name: Crear usuario en switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+  
+  vars_prompt:
+    - name: "username"
+      prompt: "Ingrese el nombre del nuevo usuario"
+      private: no
+    
+    - name: "user_password"
+      prompt: "Ingrese la contraseña del usuario"
+      private: yes
+      confirm: yes
+    
+    - name: "privilege_level"
+      prompt: "Ingrese el nivel de privilegio (operator/manager/Level-15)"
+      private: no
+      default: "operator"
+
+  tasks:
+    - name: Validar nivel de privilegio
+      assert:
+        that:
+          - privilege_level in ['operator', 'manager', 'Level-15']
+        fail_msg: "Nivel de privilegio inválido. Use operator, manager o Level-15"
+
+    - name: Crear usuario local
+      cli_command:
+        command: "{{ item }}"
+      loop:
+        - "configure"
+        - "aaa authentication local-user {{ username }} group {{ privilege_level }} password plaintext {{ user_password }}"
+        - "write memory"
+      register: output
+      no_log: true  # Para no mostrar la contraseña en los logs
+
+    - name: Verificar la creación del usuario
+      cli_command:
+        command: "show authorization"
+      register: verify_output
+
+    - name: Mostrar resultado de la verificación
+      debug:
+        var: verify_output.stdout_lines
