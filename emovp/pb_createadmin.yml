@@ -20,7 +20,7 @@
         command: "{{ item }}"
       loop:
         - "configure terminal"
-        - "aaa authentication local-user {{ username }} group Level-15 password {{ user_password }}"
+        - "aaa authentication local-user {{ username }} group Level-15 password sha1 {{ user_password }}"
         - "write memory"
       register: output
 
