@@ -5,7 +5,7 @@
   
   tasks:
     - name: Run show version
-      arubanetworks.aoscx.aoscx_command:
+      aruba_command:
         commands:
           - show version
       register: version_output
