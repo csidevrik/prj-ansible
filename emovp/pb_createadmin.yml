@@ -21,7 +21,7 @@
 
     - name: Configurar usuario administrador
       cli_command:
-        command: 'aaa authentication local-user "{{ username }}" group "Level-15" password plaintext'
+        command: "aaa authentication local-user \"{{ username }}\" group \"Level-15\" password plaintext"
         prompt:
           - "New password for.*: "
           - "Please retype new password for.*: "
