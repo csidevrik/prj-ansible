@@ -1,0 +1,15 @@
+# check_arp.yml
+---
+- name: Consultar tabla ARP en switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+
+  tasks:
+    - name: Obtener tabla ARP
+      cli_command:
+        command: "show arp"
+      register: arp_output
+
+    - name: Mostrar tabla ARP
+      debug:
+        var: arp_output.stdout_lines
