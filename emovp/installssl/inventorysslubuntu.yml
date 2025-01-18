@@ -37,3 +37,12 @@ all:
           ansible_connection: ssh
           ansible_become: yes
           ansible_python_interpreter: /usr/bin/python3
+
+        SW_zimbra:
+          ansible_host: 172.20.1.99
+          ansible_user: "{{ vault_credentials.server5.username }}"
+          ansible_password: "{{ vault_credentials.server5.password }}"
+          ansible_become_password: "{{ vault_credentials.server5.become_password }}"
+          ansible_connection: ssh
+          ansible_become: yes
+          ansible_python_interpreter: /usr/bin/python3
