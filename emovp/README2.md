@@ -10,8 +10,6 @@ Prueba con ansible
 
 Primero creamos un inventario que haga uso de credenciales en los servidores
 
-
-
 3. revisar en el caso del mail el snapshot
 4. 88.10   serviciosssl    		ubuntu 20.04
    88.6    pagina web  			ubuntu 20.04

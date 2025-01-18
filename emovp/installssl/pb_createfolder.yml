@@ -1,0 +1,17 @@
+# create_folder.yml
+---
+- name: Create folder on Linux servers
+  hosts: all  # Esto aplicará a todos los grupos
+  become: yes  # Para ejecutar con privilegios sudo
+  
+  vars:
+    folder_path: ~/SSL_FILES # Modifica esta ruta según necesites
+  
+  tasks:
+    - name: Crear carpeta si no existe
+      file:
+        path: "{{ folder_path }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
