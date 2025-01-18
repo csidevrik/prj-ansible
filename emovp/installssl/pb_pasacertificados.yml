@@ -1,0 +1,52 @@
+---
+- name: Transferir archivos a servidores remotos
+  hosts: ubuntu_servers
+  become: yes
+  
+  vars:
+    local_files_path: "."  # Ruta donde están tus archivos en el servidor Ansible
+    remote_path: "/home/{{ ansible_user }}/SSL_FILES"  # Ruta destino en los servidores remotos
+    file_owner: "{{ ansible_user }}"
+    file_group: "{{ ansible_user }}"
+    file_mode: "0755"  # Permisos para los archivos
+  
+  tasks:
+    - name: Asegurar que existe el directorio destino
+      file:
+        path: "{{ remote_path }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ file_owner }}"
+        group: "{{ file_group }}"
+    
+    - name: Transferir archivos
+      copy:
+        src: "{{ item }}"
+        dest: "{{ remote_path }}"
+        owner: "{{ file_owner }}"
+        group: "{{ file_group }}"
+        mode: "{{ file_mode }}"
+      with_fileglob:
+        # - "{{ local_files_path }}/*"  # Copia todos los archivos del directorio
+        - "{{ local_files_path }}/__emov_gob_ec_chain.crt"  # Copia crt chain
+        - "{{ local_files_path }}/__emov_gob_ec.ca-bundle"  # Copia ca bundle
+        - "{{ local_files_path }}/__emov_gob_ec.crt"  # Copia el crt certificado
+        - "{{ local_files_path }}/__emov_gob_ec.key"  # Copia el key certificado
+        - "{{ local_files_path }}/__emov_gob_ec.p7b"  # Copia el p7b certificado
+      register: copy_result
+    
+    - name: Mostrar resultado de la transferencia
+      debug:
+        msg: "Archivo {{ item.dest }} transferido exitosamente"
+      loop: "{{ copy_result.results }}"
+      when: item.changed
+
+    - name: Verificar archivos transferidos
+      find:
+        paths: "{{ remote_path }}"
+        file_type: file
+      register: found_files
+
+    - name: Mostrar archivos en el directorio remoto
+      debug:
+        msg: "Archivos encontrados en {{ remote_path }}: {{ found_files.files | map(attribute='path') | list }}"
