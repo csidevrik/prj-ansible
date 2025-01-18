@@ -1,8 +1,8 @@
+## Primero, vamos a verificar y configurar SSH en el switch.
 
-
-## Primero, vamos a verificar y configurar SSH en el switch. 
 Ejecuta estos comandos:
-``` bash
+
+```bash
 configure
 crypto key generate ssh
 ip ssh
@@ -10,47 +10,59 @@ ip ssh filetransfer
 write memory
 ```
 
-
 ## Verifica que SSH esté activo:
-``` bash
+
+```bash
 show ip ssh
 ```
 
 ## Configura el acceso REST:
-``` sh
+
+```sh
 configure
 rest-interface
 write memory
 ```
 
 ## Extrae el token ssh del equipo switch, router, ap o firewall
-``` bash
+
+```bash
     show crypto host-public-key
 ```
+
 Algo asi es que te saldria
-***
+
+---
+
 AAAAB3NzaC1yc2EAAAADAQABAAABAQCjxB38PJ/WklbBwkusL7Yjo/1xsfYaBhMGANJJKjV+t0XLgrRrnQ1JzmieaDeom4zj117kOZNCM5bVwWHIBHAYfze0NbBJQNhyQs2ZmKEHLc+MWgp69K8GicNxrv0FzbxarfFieK6/9nMj/KRIW5G/eNwoFPyhDK6jr3mt3TbJMJfCP42M5+05yjXtTFsTGqqoum
 XxmPERWUfLMlQBMEtLx6zpUn752cIAmfnVN1IHnzHQuahr5JOXO4qABvs6iOys9qYWFNHnp+4lnv+S3/ubbkm96D6gCdSvA42UPRjWeYmxdqcwh9jShBISh2XIbo0MqAezMKoCHvTTACeGC1+N
-***
+
+---
 
 ![alt text](equipo-key-ssh.png)
+
 ## En tu computadora/servidor de gestión, necesitas instalar Ansible: y ciertas dependencias
 
 ### Para Linux (Ubuntu/Debian):
-``` bash
+
+```bash
 sudo apt update
 sudo apt install ansible
 pip install ansible-pylibssh 
 pip install paramiko
 ```
+
 ### Para RHEL/CentOS:
-``` bash
+
+```bash
 sudo yum install ansible
 pip install ansible-pylibssh 
 pip install paramiko
 ```
+
 ### Para Fedora:
-``` bash
+
+```bash
 sudo dnf install ansible
 pip install ansible-pylibssh 
 pip install paramiko
@@ -58,22 +70,23 @@ pip install paramiko
 
 ## Instala la colección de Aruba para Ansible:
 
-``` bash
+```bash
 ansible-galaxy collection list | grep aruba
 ansible-galaxy collection install arubanetworks.aos_switch
 ansible-galaxy collection install arubanetworks.aoscx
 ansible-galaxy collection install arubanetworks.aruba_central 
-``` 
+```
+
 ## Crea un directorio para tu proyecto:
 
-``` bash
+```bash
 mkdir aruba-ansible
 cd aruba-ansible
 ```
 
 ## Crea un archivo inventory.yml:
 
-``` bash
+```bash
 echo "---
 all:
   hosts:
@@ -84,9 +97,10 @@ all:
       ansible_user: TU-USUARIO
       ansible_password: TU-PASSWORD" > inventory.yml
 ```
+
 ## Crea un playbook de prueba (test.yml):
 
-``` bash
+```bash
 echo "---
 - name: Test Aruba Connection
   hosts: aruba_switch
@@ -99,8 +113,9 @@ echo "---
           - show version
           - show running-config" > test.yml
 ```
+
 ## Prueba la conexión:
 
-``` bash
+```bash
 ansible-playbook -i inventory.yml test.yml
 ```
