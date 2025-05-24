@@ -49,18 +49,18 @@ all:
         
         SRV-ERP-PUBLICO:
           ansible_host: 172.20.1.69
-          ansible_user: "{{ vault_credentials.server5.username }}"
-          ansible_password: "{{ vault_credentials.server5.password }}"
-          ansible_become_password: "{{ vault_credentials.server5.become_password }}"
+          ansible_user: "{{ vault_credentials.server6.username }}"
+          ansible_password: "{{ vault_credentials.server6.password }}"
+          ansible_become_password: "{{ vault_credentials.server6.become_password }}"
           ansible_connection: ssh
           ansible_become: yes
           ansible_python_interpreter: /usr/bin/python3
 
         SRV-ERP-APP-PROD:
           ansible_host: 172.20.1.227
-          ansible_user: "{{ vault_credentials.server6.username }}"
-          ansible_password: "{{ vault_credentials.server6.password }}"
-          ansible_become_password: "{{ vault_credentials.server6.become_password }}"
+          ansible_user: "{{ vault_credentials.server7.username }}"
+          ansible_password: "{{ vault_credentials.server7.password }}"
+          ansible_become_password: "{{ vault_credentials.server7.become_password }}"
           ansible_connection: ssh
           ansible_become: yes
           ansible_python_interpreter: /usr/bin/python3
