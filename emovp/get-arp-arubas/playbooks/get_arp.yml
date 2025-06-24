@@ -1,0 +1,15 @@
+---
+- name: Consultar tabla ARP de switches Aruba
+  hosts: aruba_switches
+  gather_facts: no
+  collections:
+    - arubanetworks.aos_switch
+  tasks:
+    - name: Obtener tabla ARP
+      arubaoss_command:
+        commands: ['show arp']
+      register: arp_output
+
+    - name: Mostrar salida de ARP
+      debug:
+        var: arp_output.stdout_lines
