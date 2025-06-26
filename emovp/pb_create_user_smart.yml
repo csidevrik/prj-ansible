@@ -18,6 +18,9 @@
       prompt: "Ingrese el nivel de privilegio (operator/manager/Level-15)"
       private: no
       default: "operator"
+  
+  vars_files:
+  - vault/vault_credentials.yml
 
   tasks:
     - name: Validar nivel de privilegio

@@ -2,12 +2,18 @@
 - name: Consultar tabla ARP de switches Aruba
   hosts: aruba_switches
   gather_facts: no
+  vars_files:
+    - ../vault/vault_credentials.yml  # Asegúrate de ajustar la ruta si cambia
   collections:
     - arubanetworks.aos_switch
+  vars:
+    ansible_connection:  network_cli
   tasks:
     - name: Obtener tabla ARP
       arubaoss_command:
-        commands: ['show arp']
+        # commands: [ 'show arp' ]
+        commands:
+          - 'show version'
       register: arp_output
 
     - name: Mostrar salida de ARP
