@@ -1,0 +1,27 @@
+---
+- name: Test Aruba Switch Connection
+  hosts: all
+  gather_facts: no
+  collections:
+  - arubanetworks.aos_switch
+  vars:
+    ansible_connection: network_cli
+  tasks:
+    - name: Check connection to Aruba switch
+      arubaoss_command:
+        commands: ['show version']
+      register: result
+
+    - name: Display the result
+      debug:
+        var: result.stdout_lines
+
+# - hosts: all
+#   collections:
+#     - arubanetworks.aos_switch
+#   vars:
+#     ansible_connection: network_cli
+#   tasks:
+#     - name: Execute show run on the switch
+#       arubaoss_command:
+#         commands: ['show version']

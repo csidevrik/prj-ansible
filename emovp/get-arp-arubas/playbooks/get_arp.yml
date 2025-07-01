@@ -4,10 +4,10 @@
   gather_facts: no
   vars_files:
     - ../vault/vault_credentials.yml  # Asegúrate de ajustar la ruta si cambia
-  collections:
-    - arubanetworks.aos_switch
-  vars:
-    ansible_connection:  network_cli
+  # collections:
+  #   - arubanetworks.aos_switch
+  # vars:
+  #   ansible_connection:  network_cli
   tasks:
     - name: Obtener tabla ARP
       arubaoss_command:

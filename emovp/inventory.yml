@@ -1,3 +1,4 @@
+---
 all:
   children:
     aruba_switches:
