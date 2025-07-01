@@ -5,22 +5,26 @@ Requisitos Previos
 1. Paquetes necesarios
 
 Instala Ansible y las dependencias:
-
+```bash
 sudo dnf install ansible git -y  # En Fedora
+```
 
 2. Crear entorno de trabajo
-
+```bash
 mkdir -p ~/ansible-aruba/{inventory,playbooks,vault}
 cd ~/ansible-aruba
+```
 
 3. Instalar colecciones necesarias
-
+```bash
 ansible-galaxy collection install arubanetworks.aos_switch
+```
 
 Inventario de Hosts (YAML)
 
-Archivo: inventory/hosts.yml
+**Archivo: inventory/hosts.yml**
 
+```note
 all:
   children:
     aruba_switches:
@@ -31,26 +35,29 @@ all:
           ansible_password: "{{ vault_credentials.switch1.password }}"
           ansible_connection: ssh
           ansible_ssh_common_args: '-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'
+```
 
 🔒 Variables sensibles se guardan en vault/vault_credentials.yml
 
 Vault de credenciales
 
-Archivo: vault/vault_credentials.yml
-
+**Archivo: vault/vault_credentials.yml**
+```note
 vault_credentials:
   switch1:
     username: admemov
     password: supersecreta123
+```
 
 Para encriptarlo:
-
+```bash
 ansible-vault encrypt vault/vault_credentials.yml
+```
 
 Playbook de prueba con cli_command
 
-Archivo: playbooks/get_version.yml
-
+**Archivo: playbooks/get_version.yml**
+```bash
 ---
 - name: Obtener versión del sistema Aruba
   hosts: aruba_switches
@@ -66,10 +73,11 @@ Archivo: playbooks/get_version.yml
     - name: Mostrar salida
       debug:
         var: version_output.stdout_lines
-
+```
 Ejecución:
-
+```bash
 ansible-playbook -i inventory/hosts.yml playbooks/get_version.yml --ask-vault-pass
+```
 
 Verificación de Conectividad
 
