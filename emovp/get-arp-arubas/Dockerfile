@@ -43,5 +43,5 @@ WORKDIR /home/$USERNAME/get-arp-arubas
 
 # 🔁 Iniciar el servidor SSH al arrancar el contenedor
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# RUN chmod +x /usr/local/bin/entrypoint.sh
 CMD ["/usr/local/bin/entrypoint.sh"]

@@ -1,0 +1,27 @@
+- name: Verificar si WildFly está instalado
+  hosts: ubuntu_servers
+  become: yes
+  # gather_facts: no
+
+  tasks:
+    - name: Verificar si el binario de WildFly está en una ruta conocida
+      ansible.builtin.stat:
+        path: /opt/wildfly
+      register: wildfly_path
+
+    - name: Verificar si el servicio wildfly existe
+      ansible.builtin.shell: systemctl list-unit-files | grep wildfly
+      register: wildfly_service
+      ignore_errors: yes
+      changed_when: false
+
+    - name: Mostrar si WildFly está instalado
+      ansible.builtin.debug:
+        msg: >
+          {{
+            '✅ WildFly detectado en este host.'
+            if wildfly_path.stat.exists or 'wildfly' in wildfly_service.stdout
+            else '❌ WildFly NO está instalado.'
+          }}
+
+
