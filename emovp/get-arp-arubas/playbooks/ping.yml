@@ -1,0 +1,15 @@
+---
+- name: Verificar conectividad con los switches
+  hosts: aruba_switches
+  gather_facts: no
+  vars_files:
+    - ../vault/vault_credentials.yml
+  tasks:
+    - name: Hacer ping (comando CLI, no ICMP)
+      cli_command:
+        command: "ping 8.8.8.8 repetitions 5"
+      register: ping_result
+
+    - name: Mostrar salida
+      debug:
+        var: ping_result.stdout_lines

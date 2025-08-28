@@ -1,0 +1,1679 @@
+    1  chsh -s $(which zsh)
+    2  sudo chsh -s $(which zsh)
+    3  chsh -s $(which zsh)
+    4  sudo reboot
+    5  sudo dnf install htop
+    6  htop
+    7  sudo dnf install ansible
+    8  ansible all
+    9  ansible --version
+   10  ansible -version
+   11  ansible --version
+   12  sudo vim /etc/ansible
+   13  ping 172.20.1.64
+   14  sudo dnf update
+   15  cat /etc/os-release
+   16  sudo dnf --refresh upgrade
+   17  sudo dnf install dnf-plugin-system-upgrade --best
+   18  sudo dnf system-upgrade download --refresh --releasever=34
+   19  sudo dnf system-upgrade reboot
+   20  sudo dnf update
+   21  ansible --version
+   22  ll
+   23  mkdir Downloads
+   24  mkdir DEV
+   25  ll
+   26  PWD
+   27  pwd
+   28  sudo dnf install ansible-
+   29  sudo dnf install ansible
+   30  sudo dnf update
+   31  screenfetch
+   32  sudo dnf --refreshupdate
+   33  sudo dnf upgrade
+   34  sudo dnf install dnf-plugin-system-upgrade
+   35  sudo dnf system-upgrade download --releasever=35
+   36  sudo dnf system-upgrade reboot
+   37  screenfetch
+   38  sudo dnf system-upgrade download --releasever=36
+   39  sudo dnf --refresh upgrade
+   40  ua status
+   41  sudo dnf system-upgrade download --releasever=36
+   42  sudo dnf system-upgrade reboot
+   43  screenfetch
+   44  sudo dnf system-upgrade download --releasever=37
+   45  sudo dnf system-upgrade reboot
+   46  sudo dnf --refresh upgrade
+   47  sudo dnf update
+   48  cls
+   49  sudo nvim .zsh
+   50  sudo dnf instal zsh
+   51  sudo dnf install zsh
+   52  sudo dnf install neovim
+   53  sudo dnf install ansible
+   54  cls
+   55  sudo nvim .zshrc
+   56  zsh
+   57  cls
+   58  sudo nvim /etc/ansible/hosts
+   59  ll
+   60  cdde
+   61  cd DEV
+   62  ll
+   63  sudo dnf update
+   64  ll
+   65  sudo mv DEV dev
+   66  ll
+   67  cd dev
+   68  ll
+   69  sudo nvim /etc/ansible
+   70  sudo nvim /etc/ansible/ansible.cfg
+   71  sudo nvim /etc/ansible/hosts
+   72  ll
+   73  cd dev
+   74  ll
+   75  pwd
+   76  mkdir ansible
+   77  cd ansible
+   78  ll
+   79  cat ~/.ssh/id_rsa.pub
+   80  ssh-keygen
+   81  cat ~/.ssh/id_rsa.pub
+   82  ssh-copy-id administrador@172.20.1.64
+   83  exit
+   84  screenfetch
+   85  exit
+   86  ssh-copy-id administrador@172.20.1.81
+   87  exit
+   88  ssh-copy-id administrador@172.20.1.64
+   89  ssh-copy-id administrador@172.20.1.81
+   90  ssh 172.20.1.64
+   91  ssh 172.20.1.81
+   92  ssh-copy-id rikuriak@172.20.1.81
+   93  ssh-copy-id administrador@172.20.1.81
+   94  cat /etc/ansible/hosts
+   95  ansible produsubu -m ping
+   96  history | grep pub
+   97  history | grep keyg
+   98  ansible produsubu -m ping
+   99  ansible all -m ping -u user --ask-pass
+  100  ansible all -m ping -u administrador --ask-pass
+  101  ll
+  102  cd dev
+  103  ll
+  104  cd ansible
+  105  ll
+  106  mkdir playbook1
+  107  cd playbook1
+  108  ansible-vault credsintra.yml
+  109  ansible-vault encrypt credsintra.yml
+  110  sudo  nvim creds_1-64-intra.yml
+  111  ansible-vault encrypt credsintra.yml
+  112  ansible-vault encrypt creds_1-64-intra.yml
+  113  ansible-vault -vv encrypt creds_1-64-intra.yml
+  114  ll
+  115  sudo chown rikuriak:rikuriak creds_1-64-intra.yml
+  116  ansible-vault -vv encrypt creds_1-64-intra.yml
+  117  ll
+  118  vim creds_1-64-intra.yml
+  119  nvim creds_1-81-sur.yml
+  120  ansible-vault -vv encrypt creds_1-81-sur.yml
+  121  nvim creds_1-81-sur.yml
+  122  ansible-vault -vv encrypt creds_1-81-sur.yml
+  123  ll
+  124  nvim playbook_emov1.yml
+  125  cd dev
+  126  cd ansible
+  127  ll
+  128  cd playbook1
+  129  ll
+  130  ansible-playbook playbook_emov1.yml
+  131  nvim playbook_emov1.yml
+  132  cat /etc/ansible/hosts
+  133  ansible-playbook playbook_emov1.yml
+  134  nvim playbook_emov1.yml
+  135  ansible-playbook playbook_emov1.yml
+  136  nvim playbook_emov1.yml
+  137  ansible-playbook playbook_emov1.yml
+  138  nvim playbook_emov1.yml
+  139  ansible-playbook playbook_emov1.yml
+  140  nvim playbook_emov1.yml
+  141  ansible-playbook playbook_emov1.yml
+  142  nvim playbook_emov1.yml
+  143  ansible-playbook playbook_emov1.yml
+  144  nvim playbook_emov1.yml
+  145  ansible-playbook playbook_emov1.yml
+  146  nvim playbook_emov1.yml
+  147  ansible-playbook playbook_emov1.yml
+  148  nvim playbook_emov1.yml
+  149  ansible-playbook playbook_emov1.yml
+  150  nvim playbook_emov1.yml
+  151  ansible-playbook playbook_emov1.yml
+  152  ansible-vault -vv encrypt creds_1-81-sur.yml
+  153  nvim creds_1-81-sur.yml
+  154  ansible-vault -vv encrypt creds_1-81-sur.yml
+  155  ansible-playbook playbook_emov1.yml
+  156  nvim playbook_emov1.yml
+  157  ansible-playbook playbook_emov1.yml
+  158  ping 172.20.99.55
+  159  ssh admemov@172.20.99.55
+  160  ssh -oKexAlgorithms=diffie-hellman-group1-sha1 admemov@172.20.99.55
+  161  sudo nano /etc/ssh/ssh_config
+  162  ssh admemov@172.20.99.55
+  163  exit
+  164  sudo dnf update
+  165  cls
+  166  hostname
+  167  hostnamectl status
+  168  ip addr
+  169  hostnamectl hostname gestor_fed
+  170  sudo reboot
+  171  sudo systemctl enable --now cockpit.socket
+  172  sudo systemctl start cockpit.socket
+  173  sudo dnf install cockpit
+  174  sudo systemctl start cockpit.service
+  175  sudo systemctl enable cockpit-wsinstance-https
+  176  sudo systemctl start cockpit-wsinstance-http.service
+  177  sudo firewall-cmd --list-services
+  178  sudo firewall-cmd --add-port=9090/tcp
+  179  sudo firewall-cmd --permanent --add-port=9090/tcp
+  180  sudo systemctl enable cockpit.socket
+  181  sudo systemctl start cockpit.socket
+  182  cls
+  183  screenfetch
+  184  cls
+  185  sudo dnf list available ansible
+  186  sudo dnf update
+  187  sudo dnf install ansible
+  188  sudo "rpm -qa | grep ansible"
+  189  sudo rpm -qa | grep ansible
+  190  sudo dnf list ansible
+  191  hostname
+  192  ll
+  193  cd dev
+  194  ll
+  195  cd ansible
+  196  ll
+  197  exit
+  198  ll
+  199  cd dev
+  200  ll
+  201  cd ansible
+  202  ll
+  203  gestorfed
+  204  hostnam,e
+  205  hostname
+  206  cd
+  207  cd .ssh
+  208  ll
+  209  sudo cat autorized_keys
+  210  cat autorized_keys
+  211  ll
+  212  sudo su
+  213  telnet 172.20.1.69 8443
+  214  sudo dnf install telnet
+  215  nc -vz 172.20.1.69 8443
+  216  sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2022.repo
+  217  sudo dnf install -y mssql-server
+  218  sudo /opt/mssql/bin/mssql-conf setup
+  219  sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+  220  sudo firewall-cmd --reload
+  221  sudo systemctl enable mssql-server
+  222  sudo systemctl status mssql-server
+  223  sudo systemctl start mssql-server
+  224  sudo systemctl status mssql-server
+  225  sudo /opt/mssql/bin/sqlservr-setup
+  226  sudo systemctl enable mssql-server mssql-server-telemetry
+  227  sudo df -h
+  228  history
+  229  sudo dnf remove mssql-server-16.0.4055.4-2.x86_64
+  230  exit
+  231  ping 172.20.1.74
+  232  hostname
+  233  sudo dnf update
+  234  sudo dnf install open-vm-tools
+  235  sudo dnf install sqlite
+  236  cls
+  237  sudo dnf install ansible
+  238  ansible --version
+  239  sudo dnf install ansible-collection-community-mysql-3.7.0-1.fc37.noarch
+  240  ssh root@172.20.1.45
+  241  nc -z -n -v 172.20.1.111 1433
+  242  nc -z -n -v 172.20.1.111 1432
+  243  nc -z -n -v 172.20.1.111 1433
+  244  nc -z -n -v 172.20.1.111 22
+  245  nc -znv 172.20.1.111 22
+  246  cls
+  247  screenfetch
+  248  ip address
+  249  sh -c "$(curl -fsSL https://raw.githubusercontent.com/carlossiguam/prj-bash/main/scripts.d/install-utils/install.sh)"
+  250  grep -oP '(?<=Fedora release )[0-9]+' /etc/fedora-release
+  251  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  252  cls
+  253  exit
+  254  zsh
+  255  sudo dnf update
+  256  whoami
+  257  cat /etc/passwd
+  258  sudo realm discover local.emov.gob.ec
+  259  screenfetch
+  260  cat /etc/ansible
+  261  cd /etc/ansible
+  262  ll
+  263  ip addr
+  264  screenfetch
+  265  ip link
+  266  ip address
+  267  cls
+  268  ping 10.10.10.34
+  269  traceroute 10.10.10.34
+  270  ping 10.10.10.34
+  271  curl -ik 10.10.10.34
+  272  telnet 10.10.10.34 80
+  273  sudo dnf install telnet
+  274  telnet 10.10.10.34 80
+  275  sudo dnf instal nginx
+  276  screenfetch
+  277  exit
+  278  ncdu
+  279  history
+  280  ip addr link show
+  281  ip link show
+  282  ip addr
+  283  cd .ssh
+  284  ll
+  285  cat id_rsa.pub
+  286  ssh 172.20.1.66
+  287  docker ps
+  288  sudo dnf remove docker \\n                  docker-client \\n                  docker-client-latest \\n                  docker-common \\n                  docker-latest \\n                  docker-latest-logrotate \\n                  docker-logrotate \\n                  docker-selinux \\n                  docker-engine-selinux \\n                  docker-engine
+  289  sudo dnf -y install dnf-plugins-core
+  290  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+  291  sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  292  cls
+  293  sudo systemctl enable docker.service
+  294  sudo systemctl start docker.service
+  295  sudo usermod -aG wheel rikuriak
+  296  exit
+  297  docker ps
+  298  sudo systemctl start docker
+  299  docker ps
+  300  sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  301  docker ps
+  302  sudo systemctl stop docker
+  303  sudo systemctl status docker
+  304  sudo systemctl stop docler
+  305  sudo systemctl stop docker
+  306  sudo systemctl status docker
+  307  sudo systemctl stop docker
+  308  sudo systemctl status docker
+  309  sudo dnf remove docker \\n                  docker-client \\n                  docker-client-latest \\n                  docker-common \\n                  docker-latest \\n                  docker-latest-logrotate \\n                  docker-logrotate \\n                  docker-selinux \\n                  docker-engine-selinux \\n                  docker-engine
+  310  sudo dnf -y install dnf-plugins-core
+  311  sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  312  exit
+  313  ping 10.10.10.34
+  314  curl -ik http://10.10.10.34/tasasgpa/servicio_emov.php\?placa\=ABI4843
+  315  wget http://10.10.10.34/tasasgpa/servicio_emov.php\?placa\=ABI4843
+  316  curl http://10.10.10.34/tasasgpa/servicio_emov.php\?placa\=ABI4843
+  317  wget http://10.10.10.34/tasasgpa/servicio_emov.php\?placa\=ABI4843
+  318  curl -u 123:123 http://10.10.10.34/tasasgpa/servicio_emov.php\?placa\=ABI4843
+  319  ping 10.10.10.34
+  320  telnet 172.20.1.30 8723
+  321  exit
+  322  cls
+  323  sudo dnf update
+  324  telnet 10.10.10.236 5020
+  325  telnet 10.10.10.236 8725
+  326  telnet 10.10.10.236 5020
+  327  exit
+  328  sudo dnf update
+  329  docker ps
+  330  sudo systemctl status docker.service
+  331  sudo systemctl start docker.service
+  332  sudo systemctl status docker.service
+  333  sudo systemctl stat docker.service
+  334  sudo systemctl status docker.service
+  335  docker ps
+  336  sudo systemctl stat docker.service
+  337  sudo systemctl status docker.service
+  338  sudo systemctl status docker.services
+  339  sudo systemctl status docker.service
+  340  sudo systemctl start docker.service
+  341  sudo systemctl status docker.service
+  342  sudo systemctl start docker.service
+  343  docker ps
+  344  sudo reboot
+  345  docker ps
+  346  ipconfig
+  347  ip addres
+  348  screenfetch
+  349  sudo dnf upgrade --refresh
+  350  sudo dnf install dnf-plugin-system-upgrade
+  351  sudo dnf system-upgrade download --releasever=38
+  352  cls
+  353  screenfetch
+  354  sudo dnf update
+  355  sudo dnf upgrade-minimal
+  356  sudo dnf upgrade --refresh
+  357  sudo dnf install dnf-plugin-system-upgrade
+  358  sudo dnf system-upgrade download --releasever=38
+  359  sudo dnf clean packages
+  360  cls
+  361  screenfetch
+  362  sudo dnf system-upgrade download --releasever=38
+  363  sudo dnf system-upgrade clean
+  364  sudo dnf clean package
+  365  sudo dnf clean packages
+  366  dnf install dnf-plugin-system-upgrade --best
+  367  sudo dnf install dnf-plugin-system-upgrade --best
+  368  dnf system-upgrade download --releasever=38
+  369  sudo dnf system-upgrade download --releasever=38
+  370  screenfetch
+  371  sudo dnf system-upgrade reboot
+  372  screenfetch
+  373  sudo dnf update
+  374  clear
+  375  sudo dnf update
+  376  sudo dnf distro-sync
+  377  sudo dnf update
+  378  screenfetch
+  379  dnf system-upgrade download --releasever=39
+  380  sudo dnf system-upgrade download --releasever=39
+  381  sudo dnf clean packaages
+  382  screenfetch
+  383  docker ps
+  384  sudo systemctl start docker.service
+  385  docker ps
+  386  sudo systemctl enable docker.service
+  387  sudo systemctl enable docker.socket
+  388  docker ps
+  389  sudo systemctl start docker.socket
+  390  docker ps
+  391  dnf system-upgrade download --releasever=39
+  392  sudo dnf system-upgrade download --releasever=39
+  393  sudo dnf system-upgrade reboot
+  394  ll
+  395  ncdu
+  396  ncdu /
+  397  ll
+  398  cd dev
+  399  ll
+  400  cd ansible
+  401  ll
+  402  cd playbook1
+  403  ll
+  404  sudo nvim playbook_emov1.yml
+  405  ..
+  406  ll
+  407  cd playbook1
+  408  ll
+  409  cat creds_1-64-intra.yml
+  410  cat creds_1-81-sur.yml
+  411  history creds_1-64-intra.yml
+  412  history | grep ansible
+  413  ansible-playbook playbook_emov1.yml
+  414  cd
+  415  screenfetch
+  416  sudo dnf update
+  417  ping www.google.com
+  418  clear
+  419  cls
+  420  clear
+  421  sudo dnf update
+  422  history
+  423  wget https://serviciosenlinea.azuay.gob.ec/tasas/serviciosWeb/servicio_emov_cuenca.php\?
+  424  curl https://serviciosenlinea.azuay.gob.ec/tasas/serviciosWeb/servicio_emov_cuenca.php\?
+  425  ifconfig
+  426  exit
+  427  ping 10.34.60.50
+  428  telnet 10.34.60.50 3306
+  429  cls
+  430  sudo dnf update
+  431  clear
+  432  sudo apt update
+  433  sudo dnf update
+  434  sudo dnf upgrade
+  435  clear
+  436  screenfetch
+  437  if for daugther\nexit\nexit\nquit
+  438  docker ps
+  439  sudo systemctl restart docker.service
+  440  sudo systemctl status docker.service
+  441  docker ps
+  442  sudo usermod -aG docker rikuriak
+  443  screenfetch
+  444  sudo reboot
+  445  docker ps
+  446  ll
+  447  cd dev
+  448  ll
+  449  cd ansible
+  450  ll
+  451  docker ps
+  452  clear
+  453  omz changelog
+  454  sudo dnf update
+  455  screenfetch
+  456  cls
+  457  exit
+  458  dig registrodeoperaciones.ant.gob.ec
+  459  sudo dnf update
+  460  cls
+  461  docker ps
+  462  docker images
+  463  history | grep ansible
+  464  ping 172.20.17.4
+  465  ping 172.20.3.68
+  466  ping 172.20.17.4
+  467  docker ps
+  468  ssh root@172.20.1.94
+  469  ipconfig
+  470  ip addres
+  471  curl http://172.20.1.27:8088/descargarComprobante/gr03yi5qeq
+  472  ssh root@172.20.1.94
+  473  exit
+  474  ssh root@172.20.1.26
+  475  sudo dnf update
+  476  java -version
+  477  java --version
+  478  docker ps
+  479  ping 10.44.99.1
+  480  ping 10.48.99.1
+  481  traceroute 10.48.99.1
+  482  ping 10.48.99.1
+  483  ssh admin@10.48.99.13
+  484  sudo realm -v discover local.emov.gob.ec
+  485  sudo dnf update
+  486  uptime
+  487  sudo dnf update
+  488  hostname
+  489  sudo lsblk
+  490  ncdu
+  491  ncdu /
+  492  cd .ssh
+  493  ll
+  494  sudo nvim authorized_keys
+  495  ping app.local.emov.gob.ec
+  496  curl --location 'http://172.20.3.14:8080/WSMatriculacionJava/rest/wsConsultarVehiculo' \\n--header 'Content-Type: application/json' \\n--data '{\n    "Key":"d695d7ee2ba1c79bf3089c8982db0b1602c53e44",\n    "Placa":"ABB3896"\n}'
+  497  sudo dnf install httpie-3.2.2-1.fc39.noarch
+  498  curl --location 'http://172.20.3.14:8080/WSMatriculacionJava/rest/wsConsultarVehiculo' \\n--header 'Content-Type: application/json' \\n--data '{\n    "Key":"d695d7ee2ba1c79bf3089c8982db0b1602c53e44",\n    "Placa":"ABB3896"\n}'
+  499  ip addr
+  500  sudo dnf update
+  501  touch .ssh/authorized_keys
+  502  sudo chmod +0600 ~/.ssh/authorized_keys
+  503  sh -c "$(curl -fsSL https://raw.githubusercontent.com/csidevrik/prj-bash/main/scripts.d/install-utils/install.sh)"
+  504  sudo nvim .zshrc
+  505  sudo nvim .ssh/authorized_keys
+  506  exit
+  507  hostname
+  508  sudo dnf update
+  509  screenfetch
+  510  history | upgrade
+  511  history | grep upgrade
+  512  sudo dnf --refresh upgrade
+  513  sudo dnf install dnf-plugin-system-upgrade --best
+  514  ~18
+  515  sudo dnf system-upgrade download --refresh --releasever=40
+  516  docker ps
+  517  touch Dockerfile
+  518  ll
+  519  cd dev
+  520  ll
+  521  mkdir 
+  522  ll
+  523  mkdir docker
+  524  ll
+  525  cd docker
+  526  ll
+  527  touch Dockerfile
+  528  nvim Dockerfile
+  529  ping 172.20.1.8
+  530  ping 172.20.1.40
+  531  ping 172.20.1.13
+  532  ping 172.20.1.14
+  533  ping 172.20.1.8
+  534  ping 172.20.1.40
+  535  ping 172.30.1.2
+  536  ssh rikuriak@172.20.1.64
+  537  ping 8.8.8.8
+  538  clear
+  539  ping 172.20.3.68
+  540  clear
+  541  dig mailb4.bancopacifico.com.ec
+  542  sudo dnf update
+  543  sudo dnf install nmap
+  544  sudo dnf install arp-scan-1.10.0-2.fc39.x86_64
+  545  sudo dnf install masscan-1.3.2-8.fc39.x86_64
+  546  sudo df -h
+  547  sudo dnf install zsh
+  548  sudo dnf install hbot
+  549  sudo dnf install htop-3.2.2-3.fc39.x86_64
+  550  docker ps
+  551  sudo dnf update
+  552  clear
+  553  sudo dnf update
+  554  docker ps
+  555  sudo dnf update
+  556  docker ps
+  557  hello
+  558  ip addres
+  559  sudo reboot
+  560  ]
+  561  ll
+  562  sudo dnf upgrade
+  563  sudo dnf update
+  564  ll
+  565  cd dev
+  566  ll
+  567  cd ansible
+  568  ll
+  569  sudo nvim inventory.ini
+  570  nvim inventory.ini
+  571  ansible aruba_switches -m ping -i inventory.ini
+  572  ssh admemov@10.32.99.1
+  573  ssh admemov@10.31.99.1
+  574  ssh admemov@10.32.99.1
+  575  ssh admemov@10.31.99.1
+  576  ping 10.31.99.1
+  577  ssh admemov@10.31.99.1
+  578  ansible aruba_switches -m ping -i inventory.ini
+  579  ansible-galaxy collection install arubanetworks.aoscx
+  580  ansible aruba_switches -m ping -i inventory.ini --ask-vault-pass
+  581  cd 
+  582  ll
+  583  cd dev
+  584  ll
+  585  cd ansible
+  586  ll
+  587  cat playbook1/playbook_emov1.yml
+  588  history
+  589  cat playbook1/playbook_emov1.yml inventory.ini
+  590  cat playbook1/creds_1-64-intra.yml
+  591  cat playbook1/creds_1-81-sur.yml
+  592  ll
+  593  cd playbook1
+  594  ll
+  595  cat playbook_emov1.yml
+  596  ansible aruba_switches -m ping -i inventory.ini --ask-vault-pass
+  597  ..
+  598  ll
+  599  sudo dnf install gh
+  600  ..
+  601  ll
+  602  git clone git@github.com:csidevrik/prj-ansible.git
+  603  git clone https://github.com/csidevrik/prj-ansible.git
+  604  ll
+  605  cd prj-ansible
+  606  ..
+  607  ll
+  608  sudo rm -R prj-ansible
+  609  ll
+  610  git clone git@github.com:csidevrik/prj-ansible.git
+  611  git clone https://github.com/csidevrik/prj-ansible.git
+  612  cd prj-ansible
+  613  ll
+  614  cd dev
+  615  ll
+  616  cd prj-ansible
+  617  ll
+  618  cd emovp
+  619  ll
+  620  git pull
+  621  lll
+  622  ll
+  623  ansible-vault create group_vars/aruba_switches/vault.yml
+  624  ll
+  625  cd group_vars
+  626  ll
+  627  cd aruba_switches
+  628  ll
+  629  ...
+  630  ll
+  631  git push
+  632  git push -u origin master
+  633  git branch -a
+  634  git push -u origin master
+  635  git pull
+  636  ll
+  637  cd group_vars/aruba_switches
+  638  ll
+  639  ...
+  640  ll
+  641  ansible aruba_switches -m ping -i inventory.yml --ask-vault-pass
+  642  ansible aruba_switches -m ping
+  643  ansible-galaxy collection remove arubanetworks.aoscx
+  644  history | grep ansible-galaxy
+  645  ansible-galaxy collection install arubanetworks.aos_switch
+  646  ll
+  647  git pull
+  648  ansible-playbook test_connection.yml
+  649  ansible-playbook test_connection.yml --ask-vault-pass
+  650  ansible-galaxy collection list | grep aruba
+  651  git pull
+  652  ansible-playbook test_connection.yml --ask-vault-pass
+  653  git pull
+  654  ansible-playbook test_connection.yml --ask-vault-pass
+  655  ansible-galaxy collection install arubanetworks.aruba_central
+  656  git pull
+  657  ansible-playbook test_connection.yml --ask-vault-pass
+  658  ansible-playbook test_connection.yml --ask-vault-pass -v
+  659  pip install ansible-pylibssh
+  660  pip install paramiko
+  661  ansible-playbook test_connection.yml --ask-vault-pass -v
+  662  ansible-playbook test_connection.yml --ask-vault-pass 
+  663  git pull
+  664  ansible-playbook test_connection.yml --ask-vault-pass 
+  665  git pull
+  666  ansible-playbook test_connection.yml --ask-vault-pass 
+  667  git pull
+  668  ansible-playbook pb_delete_user.yml --ask-vault-pass 
+  669  git pull
+  670  ansible-playbook pb_createuser.yml --ask-vault-pass 
+  671  git pull
+  672  ansible-playbook pb_createuser.yml --ask-vault-pass 
+  673  git pull
+  674  ansible-playbook pb_createuser.yml --ask-vault-pass 
+  675  git pull
+  676  ansible-playbook pb_createuser.yml --ask-vault-pass 
+  677  git pull
+  678  ansible-playbook pb-createadmin.yml --ask-vault-pass 
+  679  git pull
+  680  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  681  git pull
+  682  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  683  git pull
+  684  ansible-playbook pb_createuser\ copy\ 2.yml --ask-vault-pass 
+  685  ansible-playbook pb_createuser\ copy.yml --ask-vault-pass 
+  686  git pull
+  687  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  688  git pull
+  689  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  690  git pull
+  691  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  692  git pull
+  693  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  694  git pull
+  695  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  696  git pull
+  697  ansible-playbook pb_createadmin.yml --ask-vault-pass 
+  698  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  699  git pull
+  700  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  701  git pull
+  702  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  703  git pull
+  704  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  705  cd dev/prj-ansible
+  706  lll
+  707  ll
+  708  cd emovp
+  709  ll
+  710  git pull
+  711  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  712  docker ps
+  713  screenfetch
+  714  sudo dnf install docker-compose
+  715  cd dev/prj-ansible
+  716  git pull
+  717  ll
+  718  cd emovp
+  719  ansible-playbook pb_showarp.yml --ask-vault-pass -v
+  720  sudo dnf update
+  721  ll
+  722  git pull
+  723  ansible-playbook pb_showarp.yml --ask-vault-pass -v
+  724  ll
+  725  cd dev
+  726  ll
+  727  cd prj-ansible
+  728  ll
+  729  cd emovp
+  730  ll
+  731  ansible-playbook pb_showarp.yml --ask-vault-pass -v
+  732  cat pb_showarp.yml | less 
+  733  ll
+  734  cat inventory.yml
+  735  cat group_vars
+  736  cat group_vars/aruba_switches.yml
+  737  history
+  738  history | grep vault
+  739  cat group_vars/aruba_switches/vault.yml
+  740  ll
+  741  cat ansible.cfg
+  742  cd group_vars
+  743  ll
+  744  cat aruba_switches.yml
+  745  cd aruba_switches
+  746  ll
+  747  ...
+  748  cat inventory.yml
+  749  ll
+  750  cat pb_createuser.yml
+  751  history | grep pb_createuser.yml
+  752  ansible-playbook pb_createuser.yml --ask-vault-pass 
+  753  sudo dnf update
+  754  docker ps
+  755  ncdu
+  756  htop
+  757  btop
+  758  sudo dnf install btop
+  759  btop
+  760  htop
+  761  btop
+  762  exit
+  763  ll
+  764  cd dev
+  765  lll
+  766  ll
+  767  cd ansible
+  768  ll
+  769  ..
+  770  cd prj-ansible
+  771  ll
+  772  cd emovp
+  773  ll
+  774  git status
+  775  git pull
+  776  history | grep lsof
+  777  lsof -i -P -n | grep LISTEN
+  778  lsof -nP -iTCP -sTCP:LISTEN
+  779  sudo lsof -nP -iTCP -sTCP:LISTEN
+  780  sudo lsof -i -P -n | grep LISTEN
+  781  ll
+  782  git pull
+  783  lll
+  784  ll
+  785  cd installssl
+  786  ll
+  787  history | grep vault
+  788  cd dev/prj-ansible
+  789  cd emovp
+  790  cd installssl
+  791  ll
+  792  ansible-vault create group_vars/all/vault.yml
+  793  ll
+  794  cd group_vars
+  795  ll
+  796  cd all
+  797  ll
+  798  cat vault.yml
+  799  exit
+  800  cd dev
+  801  cd prj-ansible/emovp/installssl
+  802  ll
+  803  ansible-vault edit group_vars/all/vault.yml
+  804  exit
+  805  cd dev/prj-ansible/emovp
+  806  ll
+  807  ansible-vault edit group_vars/aruba_switches/vault.yml
+  808  cd installssl
+  809  ansible-vault edit group_vars/all/vault.yml
+  810  ll
+  811  ansible-vault edit group_vars/all/vault.yml
+  812  ansible-vault edit group_vars/all/vault.ymlV0m3.%.St4lk3r
+  813  ll
+  814  ansible-vault edit group_vars/all/vault.yml
+  815  git pull
+  816  ll
+  817  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  818  screenfetcht
+  819  screenfetch
+  820  ssh rikuriak@172.20.88.10
+  821  cat ~/.ssh/id_rsa.pub
+  822  ssh rikuriak@172.20.88.10
+  823  cat ~/.ssh/id_rsa.pub
+  824  ssh rikuriak@172.20.88.10
+  825  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  826  ansible-vault edit group_vars/all/vault.yml
+  827  git pull
+  828  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  829  cd dev/prj-ansible/emovp/installssl
+  830  ll
+  831  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  832  ansible-vault edit group_vars/all/vault.yml
+  833  git pull
+  834  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  835  scp .ssh/authorized_keys rikuriak@172.20.88.6:~/.ssh/
+  836  scp .ssh/authorized_keys rikuriak@172.20.88.6:/.ssh
+  837  sudo scp .ssh/authorized_keys rikuriak@172.20.88.6:/.ssh
+  838  sudo scp .ssh/authorized_keys rikuriak@172.20.88.6:/~/.ssh
+  839  sudo scp .ssh/authorized_keys rikuriak@172.20.88.6:~/.ssh
+  840  cat .ssh/id_rsa.pub
+  841  cd dev/prj-ansible/emovp/installssl
+  842  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  843  ssh rikuriak@172.20.88.10
+  844  ssh rikuriak@172.20.88.6
+  845  ssh rikuriak@172.20.1.34
+  846  ssh rikuriak@172.20.1.100
+  847  cd dev/prj-ansible/emovp/installssl
+  848  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  849  ssh rikuriak@172.20.1.100
+  850  ssh rikuriak@172.20.88.6
+  851  ping 172.20.88.6
+  852  ssh rikuriak@172.20.88.6
+  853  cd dev/prj-ansible/emovp/installssl
+  854  ll
+  855  ansible-vault edit group_vars/all/vault.yml
+  856  ssh rikuriak@172.20.88.6
+  857  ssh rikuriak@172.20.88.10
+  858  ssh rikuriak@172.20.1.34
+  859  ssh rikuriak@172.20.1.100
+  860  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  861  screenfetch
+  862  ll
+  863  cat inventorysslubuntu.yml
+  864  cat group_vars/all/vault.yml
+  865  cat .ssh/id_rsa.pub
+  866  nvim .ssh/authorized_keys
+  867  ssh rikuriak@172.20.1.99
+  868  screenfet
+  869  screenfetch
+  870  ssh rikuriak@172.20.1.99
+  871  exit
+  872  ssh rikuriak@172.20.1.99
+  873  ansible-vault edit group_vars/all/vault.yml
+  874  git pull
+  875  ansible-playbook -i inventorysslubuntu.yml pb_createfolder.yml --ask-vault-pass
+  876  git pull
+  877  ll
+  878  git pull
+  879  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+  880  git pull
+  881  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+  882  nmap -Sn  190.152.45.196
+  883  nmap -S  190.152.45.196
+  884  nmap -nA  190.152.45.196
+  885  nmap   190.152.45.196
+  886  docker ps
+  887  sudo dnf distro-sync
+  888  screenfetch
+  889  docker ps
+  890  docker images
+  891  docker image ls
+  892  docker ps
+  893  ll
+  894  cd dev
+  895  ll
+  896  mkdir github
+  897  ll
+  898  cd docker
+  899  ll
+  900  cat Dockerfile
+  901  sudo rm Dockerfile
+  902  ..
+  903  ll
+  904  sudo rm -R docker
+  905  ll
+  906  cd ansible
+  907  ll
+  908  cat inventory.ini
+  909  ll
+  910  cd playbook1
+  911  ll
+  912  cat playbook_emov1.yml
+  913  ..
+  914  ll
+  915  cd prj-ansible
+  916  history | grep firewall-cmd
+  917  sudo firewall-cmd --add-port=3001/tcp
+  918  sudo firewall-cmd --zone=public --add-port=3001/tcp --permanent
+  919  sudo firewall-cmd --reload
+  920  docker run -d --restart=always -p 3001:80 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+  921  docker ps
+  922  history | grep lsof
+  923  sudo lsof -i -P -n | grep LISTEN
+  924  docker ps
+  925  docker stop aea282b3eba2
+  926  docker ps
+  927  docker images
+  928  docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+  929  sudo docker ps -a
+  930  docker container rm aea282b3eba2
+  931  docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+  932  docker ps
+  933  curl -ik https://10.40.55.4/tasas/serviciosWeb/servicio_emov_cuenca.php\?placa\=ABB7967
+  934  LL
+  935  ll
+  936  cd dev
+  937  ll
+  938  cd prj-ansible
+  939  ll
+  940  cd emovp
+  941  ll
+  942  cls
+  943  ll
+  944  cd dev
+  945  ll
+  946  cd prj-ansible
+  947  ll
+  948  cd emovp
+  949  ll
+  950  history | grep pb_showarp.yml
+  951  ansible-playbook pb_showarp.yml --ask-vault-pass -v
+  952  ll
+  953  history | grep pb_createadmin
+  954  ansible-playbook pb_createadmin.yml --ask-vault-pass -v
+  955  history
+  956  sudo systemctl list-units --type=service --state=running
+  957  ll
+  958  cd Downloads
+  959  sudo snap install yazi --classic
+  960  sudo dnf install snapd
+  961  sudo ln -s /var/lib/snapd/snap /snap
+  962  sudo snap install yazi --classic
+  963  exit
+  964  sudo snap install yazi --classic
+  965  yazi
+  966  sudo dnf update
+  967  clear
+  968  ll
+  969  cd dev
+  970  ll
+  971  cd prj-ansible
+  972  ll
+  973  cd emovp
+  974  ll
+  975  cd installssl
+  976  ll
+  977  ansible-playbook pb_showarp.yml --ask-vault-pass -v
+  978  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+  979  nvim inventorysslubuntu.yml
+  980  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+  981  exit
+  982  history | grep .ssh
+  983  cat ~/.ssh/id_rsa.pub
+  984  cat ~/.ssh/authorized_keys
+  985  cat ~/.ssh/id_rsa.pub
+  986  sudo scp .ssh/authorized_keys rikuriak@172.20.1.69:/.ssh
+  987  hostname
+  988  history | grep ldap
+  989  history | grep ld
+  990  ifconfigf
+  991  ifconfig
+  992  ssh-copy-id rikuriak@172.20.1.69
+  993  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+  994  ssh 172.20.1.69
+  995  ssh rikuriak@172.20.1.69
+  996  ping -c 4 srv-erp-publico
+  997  ll
+  998  nvim pb_pasacertificados.yml
+  999  nvim inventorysslubuntu.yml
+ 1000  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1001  ansible all -m ping -i inventorysslubuntu.yml -vvvv
+ 1002  ansible all -m ping -i inventorysslubuntu.yml -vvvv --ask-vault-pass
+ 1003  cccccc
+ 1004  ansible all -m ping -i inventorysslubuntu.yml -vvvv --ask-vault-pass
+ 1005  head -n 5 /home/rikuriak/dev/prj-ansible/emovp/installssl/inventorysslubuntu.yml\n
+ 1006  head -n 7 /home/rikuriak/dev/prj-ansible/emovp/installssl/inventorysslubuntu.yml\n
+ 1007  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1008  ssh-keyscan -H srv-erp-publico
+ 1009  ssh-keyscan -H srv-erp-publico >> ~/.ssh/known_hosts\n
+ 1010  ssh rikuriak@srv-erp-publico
+ 1011  nvim inventorysslubuntu.yml
+ 1012  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1013  nvim inventorysslubuntu.yml
+ 1014  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1015  cat .ssh/known_hosts
+ 1016  nvim .ssh/known_hosts
+ 1017  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1018  nvim .ssh/known_hosts
+ 1019  ssh rikuriak@172.20.1.69
+ 1020  nvim .ssh/known_hosts
+ 1021  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1022  cat ~/.ssh/known_hosts | grep srv-erp-publico
+ 1023  cat ~/.ssh/known_hosts
+ 1024  sudo chmod 600 ~/.ssh/known_hosts
+ 1025  ssh-keygen -R SRV-EP-PUBLICO
+ 1026  ssh rikuriak@172.20.1.69
+ 1027  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1028  nvim inventorysslubuntu.yml
+ 1029  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1030  nvim pb_pasacertificados.yml
+ 1031  ssh-keyscan -H 172.20.88.6 >> ~/.ssh/known_hosts\nssh-keyscan -H 172.20.1.75 >> ~/.ssh/known_hosts\n
+ 1032  ssh-keyscan -H 172.20.88.6 172.20.1.75 >> ~/.ssh/known_hosts
+ 1033  cat ~/.ssh/known_hosts | grep "172.20."
+ 1034  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1035  nvim inventorysslubuntu.yml
+ 1036  ll
+ 1037  cd dev
+ 1038  ll
+ 1039  cd prj-ansible
+ 1040  ll
+ 1041  cd emovp
+ 1042  ll
+ 1043  ..
+ 1044  ll
+ 1045  cd emovp
+ 1046  ll
+ 1047  cd installssl
+ 1048  ll
+ 1049  git pull
+ 1050  git push
+ 1051  git pull
+ 1052  ..
+ 1053  ll
+ 1054  ..
+ 1055  ll
+ 1056  git pull
+ 1057  ll
+ 1058  cd dev
+ 1059  ll
+ 1060  cd prj-ansible
+ 1061  ll
+ 1062  cd emovp
+ 1063  ll
+ 1064  git pull
+ 1065  git status
+ 1066  ssh 172.20.1.69
+ 1067  ll
+ 1068  cd dev
+ 1069  ll
+ 1070  cd prj-ansible
+ 1071  git status
+ 1072  git restore emovp/installssl/inventorysslubuntu.yml
+ 1073  git restore .
+ 1074  git clean -fd
+ 1075  git status
+ 1076  ll
+ 1077  cd emovp
+ 1078  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1079  ll
+ 1080  cd installssl
+ 1081  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1082  ll
+ 1083  ansible-vault edit group_vars/all/vault.yml
+ 1084  ll
+ 1085  ..
+ 1086  ll
+ 1087  ansible-vault edit group_vars/all/vault.yml
+ 1088  history | grep ansible-vault
+ 1089  history -E
+ 1090  ll
+ 1091  cd installssl
+ 1092  ll
+ 1093  ansible-vault create group_vars/all/vault.yml
+ 1094  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1095  ll
+ 1096  nvim inventorysslubuntu.yml
+ 1097  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1098  \ncurl -v -X POST https://www.compraspublicas.gob.ec/ProcesoContratacion/compras/exe/registroProcesosRegimenPaso1_exe.php
+ 1099  ping 190.94.132.43
+ 1100  curl -ik 190.94.132.43
+ 1101  sudo dnf update
+ 1102  screenfetch
+ 1103  sudo dnf upgrade --refresh
+ 1104  sudo dnf install dnf-plugin-system-upgrade
+ 1105  sudo dnf system-upgrade download --releasever=40
+ 1106  sudo dnf system-upgrade download --releasever=40 --allowerasing
+ 1107  dnf system-upgrade reboot
+ 1108  sudo dnf system-upgrade reboot
+ 1109  screenfetch
+ 1110  sudo do-release-upgrade
+ 1111  sudo dnf system-upgrade download --releasever=41
+ 1112  sudo dnf system-upgrade download --releasever=41 --allowerasing
+ 1113  sudo dnf system-upgrade reboot
+ 1114  sudo dnf update
+ 1115  screenfetch
+ 1116  exit
+ 1117  ll
+ 1118  cd dev
+ 1119  ll
+ 1120  cd ansible
+ 1121  ll
+ 1122  ..
+ 1123  ll
+ 1124  cd github
+ 1125  ll
+ 1126  ..
+ 1127  cd prj-ansible
+ 1128  ll
+ 1129  cd emovp
+ 1130  ll
+ 1131  cd installssl
+ 1132  ll
+ 1133  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1134  ll
+ 1135  nvim inventorysslubuntu.yml
+ 1136  ansible-vault edit group_vars/all/vault.yml
+ 1137  sudo nvim group_vars/all/vault.yml
+ 1138  git status
+ 1139  screenfetch
+ 1140  sudo dnf install GeoIP GeoIP-data
+ 1141  geoiplookup 191.201.58.112
+ 1142  sudo dnf update
+ 1143  screenfetch
+ 1144  ping 8.8.8.8
+ 1145  ll
+ 1146  clear
+ 1147  sudo dnf update
+ 1148  ll
+ 1149  cd Downloads
+ 1150  git clone https://github.com/radioactivetobi/geo-recon.git
+ 1151  cd geo-recon
+ 1152  ll
+ 1153  python geo-recon.py 190.94.132.40
+ 1154  pip install colorama
+ 1155  python geo-recon.py 190.94.132.40
+ 1156  python geo-recon.py 190.94.132.46
+ 1157  ll
+ 1158  cd snap
+ 1159  docker ps
+ 1160  version
+ 1161  uname -a
+ 1162  lsb_release -a
+ 1163  cat /etc/issue
+ 1164  cat /etc/*release
+ 1165  ip address
+ 1166  clear
+ 1167  sudo dnf install golang golang-misc gcc libXcursor-devel libXrandr-devel mesa-libGL-devel libXi-devel
+ 1168  sudo dnf update
+ 1169  screenfetch
+ 1170  exit
+ 1171  ll
+ 1172  cd snap
+ 1173  ll
+ 1174  cd yazi
+ 1175  ll
+ 1176  ...
+ 1177  ll
+ 1178  nvim Dockerfile
+ 1179  sudo nvim Dockerfile
+ 1180  sudo rm Dockerfile
+ 1181  ll
+ 1182  cd dee
+ 1183  cd dev
+ 1184  ll
+ 1185  cd ansible
+ 1186  ll
+ 1187  cd playbook1
+ 1188  ll
+ 1189  sudo dnf update
+ 1190  sudo reboot
+ 1191  history | grep playbook
+ 1192  history | grep cd
+ 1193  cd dev/prj-ansible/emovp/installssl
+ 1194  ll
+ 1195  sudo nvim inventorysslubuntu.yml
+ 1196  history | grep copy
+ 1197  ssh-copy-id rikuriak@172.20.1.227
+ 1198  ssh rikuriak@172.20.1.227
+ 1199  OA
+ 1200  cd dev/prj-ansible/emovp/installssl
+ 1201  ll
+ 1202  history 
+ 1203  git status
+ 1204  git commit -a
+ 1205  git reset --hard origin/main
+ 1206  git clean -fd
+ 1207  ll
+ 1208  ..
+ 1209  ll
+ 1210  git reset --hard origin/main
+ 1211  git clean -fd
+ 1212  git status
+ 1213  history | grep git
+ 1214  git pull
+ 1215  git status
+ 1216  history ll
+ 1217  ll
+ 1218  cd emovp/installssl
+ 1219  ll
+ 1220  ..
+ 1221  ll
+ 1222  cd installssl
+ 1223  ll
+ 1224  ..
+ 1225  ll
+ 1226  history | grep group_vars
+ 1227  ll
+ 1228  cd installssl
+ 1229  ll
+ 1230  ansible-vault edit group_vars/all/vault.yml
+ 1231  ansible-vault create group_vars/all/vault.yml
+ 1232  ansible-vault edit group_vars/all/vault.yml
+ 1233  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1234  ansible-vault edit group_vars/all/vault.yml
+ 1235  git pull
+ 1236  ansible-vault edit group_vars/all/vault.yml
+ 1237  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1238  ansible-vault edit group_vars/all/vault.yml
+ 1239  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1240  git pull
+ 1241  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1242  git status
+ 1243  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1244  ll
+ 1245  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1246  ansible-vault edit group_vars/all/vault.yml
+ 1247  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1248  ansible-vault edit group_vars/all/vault.yml
+ 1249  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1250  history | grep copy
+ 1251  ssh-copy-id rikuriak@172.20.1.100
+ 1252  ping 172.20.1.100
+ 1253  sudo dnf update
+ 1254  ssh rikuriak@172.20.1.93
+ 1255  ssh adminos@172.20.1.93
+ 1256  history
+ 1257  curl -ik https://10.40.55.4/tasas/serviciosWeb/servicio_emov_cuenca.php\?placa\=ABB7967
+ 1258  curl -ik https://10.40.55.4/tasas/serviciosWeb/servicio_emov_cuenca.php\?placa\=AFW0020
+ 1259  curl -ik https://10.40.55.4/tasas/serviciosWeb/servicio_emov_cuenca.php\?placa\=ABB7967
+ 1260  nslookup 62.89.128.106
+ 1261  tracert -d 62.89.128.106
+ 1262  traceroute -d 62.89.128.106
+ 1263  sudo dnf update
+ 1264  ll
+ 1265  ansible-playbook -i inventorysslubuntu.yml pb_pasacertificados.yml --ask-vault-pass
+ 1266  cd dev
+ 1267  ll
+ 1268  cd ansible
+ 1269  ..
+ 1270  cd github
+ 1271  ll
+ 1272  ..
+ 1273  cd prj-ansible
+ 1274  git status
+ 1275  git pull
+ 1276  git status
+ 1277  git add emovp/installssl/group_vars/
+ 1278  git status
+ 1279  git commit 
+ 1280  git config --global user.email "csigua.emov.gob.ec"
+ 1281  git config --global user.name "csidevrik"
+ 1282  git commit 
+ 1283  git status
+ 1284  git push
+ 1285  gh auth login
+ 1286  git push
+ 1287  git remote set-url origin git@github.com:csidevrik/prj-ansible.git
+ 1288  git remote -v
+ 1289  git push
+ 1290  git status
+ 1291  git push
+ 1292  git remote -v
+ 1293  git push
+ 1294  ls ~/.ssh
+ 1295  cat ~/.ssh/id_rsa.pub
+ 1296  hostname
+ 1297  ssh -T git@github.com
+ 1298  git push
+ 1299  ll
+ 1300  cd emovp
+ 1301  ll
+ 1302  ansible-playbook -i inventorysslubuntu.yml pb_showarp.yml --ask-vault-pass
+ 1303  ansible-playbook -i inventory.yml pb_showarp.yml --ask-vault-pass
+ 1304  history | grep vault
+ 1305  ll
+ 1306  cd installssl
+ 1307  ll
+ 1308  ..
+ 1309  ll
+ 1310  cd group_vars
+ 1311  ll
+ 1312  cat aruba_switches.yml
+ 1313  ansible-playbook -i  aruba_switches.yml pb_showarp.yml --ask-vault-pass
+ 1314  ..
+ 1315  ansible-playbook -i group_vars/aruba_switches.yml pb_showarp.yml --ask-vault-pass
+ 1316  cat group_vars/aruba_switches.yml
+ 1317  ll
+ 1318  cd get-arp-arubas
+ 1319  ansible-vault encrypt vault/vault_credentials.yml
+ 1320  ansible-vault edit vault/vault_credentials.yml
+ 1321  ansible-playbook playbooks/get_arp.yml
+ 1322  ansible-playbook playbooks/get_arp.yml --ask-vault-pass
+ 1323  ansible-galaxy collection install arubanetworks.aos_switch
+ 1324  ansible-galaxy collection install arubanetworks.aos_switch --force
+ 1325  ansible-galaxy collection list
+ 1326  ansible-playbook playbooks/get_arp.yml --ask-vault-pass
+ 1327  ansible-galaxy collection list | grep .aos_switch
+ 1328  ansible-playbook playbooks/get_arp.yml --ask-vault-pass
+ 1329  cd dev/github
+ 1330  ll
+ 1331  ..
+ 1332  ll
+ 1333  cd prj-ansible
+ 1334  LL
+ 1335  ll
+ 1336  cd emovp
+ 1337  ll
+ 1338  cd get-arp-arubas
+ 1339  ..
+ 1340  git push
+ 1341  git status
+ 1342  git add emovep/get-arp-arubas
+ 1343  git add
+ 1344  git add .
+ 1345  ll
+ 1346  git status
+ 1347  git push
+ 1348  git status
+ 1349  git commit
+ 1350  git push
+ 1351  git status
+ 1352  git push
+ 1353  ll
+ 1354  cd emovp/get-arp-arubas
+ 1355  ll
+ 1356  ansible-playbook playbooks/get_arp.yml --ask-vault-pass
+ 1357  ansible-playbook playbooks/get_arp.yml --ask-vault-pass -vvv
+ 1358  history
+ 1359  history | grep aruba_switches.yml
+ 1360  cd dev/prj-ansible
+ 1361  ll
+ 1362  cd emovp
+ 1363  ll
+ 1364  ansible-playbook -i  aruba_switches.yml pb_showarp.yml --ask-vault-pass
+ 1365  ll
+ 1366  ansible-vault encrypt vault/vault_credentials.yml
+ 1367  ansible-playbook pb_showarp.yml --ask-vault-pass
+ 1368  ansible-playbook -i inventory.yml pb_showarp.yml --ask-vault-pass
+ 1369  ansible-playbook -i inventoryssl.yml pb_showarp.yml --ask-vault-pass
+ 1370  ssh admemov@10.31.99.1
+ 1371  ansible-playbook -i inventory.yml pb_showarp.yml --ask-vault-pass
+ 1372  ansible-vault edit vault/vault_credentials.yml
+ 1373  ansible-playbook -i inventory.yml pb_create_user_smart.yml --ask-vault-pass
+ 1374  ssh admemov@10.31.99.1
+ 1375  cd dev/prj-ansible/emovp
+ 1376  cd get-arp-arubas
+ 1377  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1378  ansible-vault edit vault/vault_credentials.yml
+ 1379  ansible-vault view vault/vault_credentials.yml
+ 1380  pip install ansible-pylibssh
+ 1381  ll
+ 1382  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1383  sudo nvim .ssh/config
+ 1384  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1385  pip install ansible-pylibssh
+ 1386  pip3 install ansible-pylibssh
+ 1387  sudo dnf install libssh-devel-0.10.6-5.fc40.
+ 1388  sudo dnf install libssh-devel
+ 1389  sudo dnf clean all
+ 1390  sudo dnf makecache
+ 1391  screenfetch
+ 1392  sudo nvim /etc/yum.repos.d/rpmfusion-free.repo
+ 1393  sudo dnf clean all
+ 1394  sudo dnf makecache
+ 1395  sudo dnf update
+ 1396  sudo dnf install libssh-devel
+ 1397  sudo dnf update
+ 1398  cd dev
+ 1399  ll
+ 1400  cd prj-ansible
+ 1401  ll
+ 1402  cd emovp
+ 1403  cd get-arp-arubas
+ 1404  ll
+ 1405  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1406  pip install ansible-pylibssh
+ 1407  ansible-config dump | grep ssh
+ 1408  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1409  ansible-config dump | grep -i ssh
+ 1410  ansible -m ping 172.20.1.75 -i inventory/hosts.yml -vvv
+ 1411  ansible -m ping SW_31_CAPULISPAMBA -i inventory/hosts.yml -vvv
+ 1412  ansible -m ping SW_31_CAPULISPAMBA -i inventory/hosts.yml --ask-vault-pass -vvv
+ 1413  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -vvv
+ 1414  ansible-galaxy collection install arubanetworks.aos_switch
+ 1415  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -vvv
+ 1416  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -vvv
+ 1417  ansible-galaxy collection install arubanetworks.aoscx
+ 1418  ansible-galaxy collection list
+ 1419  ansible-galaxy collection install arubanetworks.aoscx --force
+ 1420  ansible-galaxy collection install arubanetworks.aos_switch --force
+ 1421  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -vvv
+ 1422  screenfetch
+ 1423  ssh admemov@10.31.99.1
+ 1424  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -vvv
+ 1425  cd dev/prj-ansible/emovp/get-arp-arubas
+ 1426  ll
+ 1427  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -vvv
+ 1428  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass 
+ 1429  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -vvv
+ 1430  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass 
+ 1431  ssh-keygen -F 10.10.57.1
+ 1432  ssh-keygen -F 10.31.99.1
+ 1433  ssh admemov@10.10.57.1
+ 1434  ssh-keygen -F 10.31.99.1
+ 1435  ssh-keygen -F 10.10.57.1
+ 1436  ssh-keyscan -t rsa 10.31.99.1 | ssh-keygen -lf -
+ 1437  ssh-keyscan -t rsa 10.10.57.1 | ssh-keygen -lf -
+ 1438  exit
+ 1439  ssh -vvv admemov@10.10.57.1
+ 1440  ssh -v admemov@10.10.57.1
+ 1441  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass 
+ 1442  ansible-vault edit vault/vault_credentials.yml
+ 1443  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass 
+ 1444  ansible-vault edit vault/vault_credentials.yml
+ 1445  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass 
+ 1446  ansible 10.10.57.1 -m raw -a "show version" -i inventory/hosts.yml -u admemov --ask-pass
+ 1447  ansible 10.10.57.1 -m raw -a "show version" -u admemov --ask-pass
+ 1448  ansible all -i "10.10.57.1," -m raw -a "show version" -u admemov --ask-pass
+ 1449  ansible-galaxy collection install arubanetworks.aoscx ansible.netcommon
+ 1450  history | grep galaxy
+ 1451  ansible-galaxy collection list
+ 1452  ansible-doc arubanetworks.aos_switch.aos_switch_command
+ 1453  ansible-doc arubanetworks.aos_switch.aos_switch_show
+ 1454  ansible-doc arubanetworks.aos_switch.aos_switch
+ 1455  ansible-doc
+ 1456  ansible-config dump | grep COLLECTIONS_PATHS
+ 1457  ansible-doc arubanetworks.aos_switch.aos_switch_command
+ 1458  ansible-config dump | grep COLLECTIONS_PATHS
+ 1459  ansible-doc -t module -l arubanetworks.aos_switch
+ 1460  ansible-galaxy collection list
+ 1461  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass 
+ 1462  ansible-doc arubanetworks.aos_switch.arubaoss_command
+ 1463  ansible aruba_switches -i inventory/hosts.yml -m arubaoss_command -a "commands=['show version']"
+ 1464  ansible aruba_switches -i inventory/hosts.yml -m arubaoss_command -a "commands=['show version']" --ask-vault-pass
+ 1465  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1466  ansible-doc arubanetworks.aos_switch.arubaoss_command
+ 1467  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1468  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -vv
+ 1469  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1470  ansible-galaxy collection install arubanetworks.aos_switch
+ 1471  ansible-galaxy collection list
+ 1472  ansible-doc -t module -l arubanetworks.aos_switch
+ 1473  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1474  ssh -v admemov@10.10.57.1
+ 1475  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1476  ssh -v admemov@10.10.57.1
+ 1477  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1478  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass 
+ 1479  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -v
+ 1480  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1481  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -v
+ 1482  cat ~/.ssh/id_rsa.pub
+ 1483  ssh admemov@10.10.57.1
+ 1484  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -v
+ 1485  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass -v
+ 1486  ansible version
+ 1487  ansible --verson
+ 1488  ansible --version
+ 1489  python --version
+ 1490  docker ps
+ 1491  ll
+ 1492  cd dev
+ 1493  cd github
+ 1494  ll
+ 1495  docker ps
+ 1496  clear
+ 1497  cls
+ 1498  screenfetch
+ 1499  docker ps
+ 1500  ping 172.20.1.94
+ 1501  ping 172.20.1.95
+ 1502  ip addr
+ 1503  docker network create -d macvlan \\n--subnet=172.20.1.94/24 \\n--gateway=172.20.1.1 \\n-o parent=ens192 \\nansigestor_macvlan
+ 1504  docker network create -d macvlan \\n--subnet=172.20.1.0/24 \\n--gateway=172.20.1.1 \\n-o parent=ens192 \\nansigestor_macvlan
+ 1505  ll
+ 1506  ..
+ 1507  ll
+ 1508  cd prj-ansible
+ 1509  git status
+ 1510  ll
+ 1511  cd emovp
+ 1512  ll
+ 1513  cd get-arp-arubas
+ 1514  git status
+ 1515  git add README.md
+ 1516  git add ansible.cfg
+ 1517  git add group_vars/all.yml
+ 1518  git add inventory/hosts.yml
+ 1519  git add playbooks/get_arp.yml
+ 1520  git add vault/vault_credentials.yml
+ 1521  git add ../pb_createFolder.yml
+ 1522  git add ../pb_create_user_smart.yml
+ 1523  git status
+ 1524  git add playbooks/ping.yml
+ 1525  git add ../vault/
+ 1526  git status
+ 1527  git checkout
+ 1528  git status
+ 1529  git commit
+ 1530  git commit -m "Esta actualizacion contempla un folder llamado get-arp.yml"
+ 1531  git push
+ 1532  ll
+ 1533  docker build -t ansible-aruba \\n--secret id=user_password, src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak .
+ 1534  docker buildx build -t ansible-aruba \\n--secret id=user_password, src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak .
+ 1535  docker buildx build . --tag ansible-aruba \\n--secret id=user_password, src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1536  docker buildx build . -t ansible-aruba \\n--secret id=user_password, src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1537  docker buildx build . -t ansible-aruba \\n--secret id=user_password,src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1538  docker images
+ 1539  docker run -it --rm \\n--network ansigestor_macvlan \\n--ip 172.20.1.94 \\n-v $PWD:get-arp-arubas \\n--name ansigestor0 \\nansible-aruba
+ 1540  docker ps
+ 1541  screenfetch
+ 1542  ip addr
+ 1543  sudo ip link add macvlan0 link ens192 type macvlan mode bridge
+ 1544  sudo ip addr add 172.20.1.95/24 dev macvlan0
+ 1545  sudo ip link set macvlan0 up
+ 1546  ip addr
+ 1547  exit
+ 1548  docker network create -d macvlan \\n--subnet=172.20.1.0/24 \\n--gateway=172.20.1.1 \\n-o parent=ens192 \ ansigestor_macvlan
+ 1549  docker network ls
+ 1550  docker ps
+ 1551  docker run -it --rm --network ansigestor_macvlan --ip 172.20.1.94 --name conansigestor ansible-aruba
+ 1552  docker ps
+ 1553  ip link show macvlan0
+ 1554  ip addr show macvlan0
+ 1555  sudo systemctl stop firewalld
+ 1556  sudo iptables -L -n -v | grep DROP
+ 1557  # Permitir tráfico entre host (por ejemplo 192.168.1.10) y contenedor (192.168.1.200)\nsudo iptables -I FORWARD -s 172.20.1.0/24 -d 172.20.1.0/24 -j ACCEPT\n
+ 1558  docker run -it --rm --network ansigestor_macvlan --ip 172.20.1.94 --name conansigestor ansible-aruba
+ 1559  docker ps
+ 1560  history | grep uptime-kuma
+ 1561  ssh admemov@10.10.57.1
+ 1562  ssh-keyscan -t rsa 10.10.57.1 | ssh-keygen -lf -
+ 1563  ssh-keyscan -t rsa 10.31.99.1 | ssh-keygen -lf -
+ 1564  ssh-keyscan -t rsa 10.32.99.1 | ssh-keygen -lf -
+ 1565  screenfetch
+ 1566  ansible-playbook -i inventory/hosts.yml playbooks/ping.yml --ask-vault-pass
+ 1567  ..
+ 1568  git status
+ 1569  git add /emovep/get-arp-arubas/Dockerfil
+ 1570  git add /emovep/get-arp-arubas/Dockerfile
+ 1571  git add emovep/get-arp-arubas/Dockerfile
+ 1572  git add emovp/get-arp-arubas/Dockerfile
+ 1573  git add emovp/get-arp-arubas/secrets
+ 1574  git add emovp/get-arp-arubas/README.md
+ 1575  git status
+ 1576  ll
+ 1577  cd dev
+ 1578  ll
+ 1579  cd prj-ansible
+ 1580  ll
+ 1581  cd emovp
+ 1582  cd test-aruba
+ 1583  ansible-playbook -i inventory.yml playbook.yml
+ 1584  cd test-aruba
+ 1585  ansible-playbook -i inventory.yml playbook.yml
+ 1586  cd
+ 1587  cd .ssh/
+ 1588  ll
+ 1589  sudo chown -R rikuriak:rikuriak config
+ 1590  ll
+ 1591  cd con
+ 1592  nvim config
+ 1593  sudo systemctl restart sshd.service
+ 1594  ansible-playbook -i inventory.yml playbook.yml
+ 1595  ssh admemov@10.10.57.1
+ 1596  sudo nvim /home/rikuriak/.ssh/known_hosts
+ 1597  ssh admemov@10.10.57.1
+ 1598  ansible-playbook -i inventory.yml playbook.yml
+ 1599  cd dev/prj-ansible/emovp/test-aruba
+ 1600  ansible-playbook -i inventory.yml playbook.yml
+ 1601  ansible-playbook -i inventory.yml playbook.yml \\n-e "ansible_ssh_common_args='-o HostkeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'"\n
+ 1602  ssh admemov@10.10.57.1
+ 1603  sudo nvim /home/rikuriak/.ssh/known_hosts
+ 1604  ssh admemov@10.10.57.1
+ 1605  ansible-playbook -i inventory.yml playbook.yml \\n-e "ansible_ssh_common_args='-o HostkeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'"\n
+ 1606  docker version
+ 1607  sudo firewall-cmd --state
+ 1608  ip link show
+ 1609  history | grep firewall
+ 1610  sudo systemctl stop firewalld
+ 1611  sudo systemctl start firewalld
+ 1612  history | grep "docker network"
+ 1613  docker network ls
+ 1614  docker ps
+ 1615  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name prueba-fedora \\n  fedora:36 /bin/bash\n
+ 1616  sudo iptables -I FORWARD -i ens192 -o ens192 -j ACCEPT
+ 1617  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name prueba-fedora \\n  fedora:36 /bin/bash\n
+ 1618  docker ps
+ 1619  docker images
+ 1620  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansible-aruba \\n  ansible-aruba /bin/bash\n
+ 1621  docker ps
+ 1622  docker image ls
+ 1623  docker container ls
+ 1624  docker image ls
+ 1625  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansible-aruba \\n  ansible-aruba /bin/bash\n
+ 1626  docker ps
+ 1627  docker images
+ 1628  docker image rm ansible-aruba
+ 1629  docker images
+ 1630  docker buildx build . -t ansible-aruba \\n--secret id=user_password,src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1631  cd get-arp-arubas
+ 1632  docker buildx build . -t ansible-aruba \\n--secret id=user_password,src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1633  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  ansible-aruba /bin/bash\n
+ 1634  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  --port 22:22 \\n
+ 1635  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  --port 22:22 \\nansible-aruba /bin/bash
+ 1636  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  -p 22:22 \\nansible-aruba /bin/bash
+ 1637  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  -p 22:22 \\nansible-aruba /usr/bin/zsh
+ 1638  docker image rm ansible-aruba
+ 1639  docker image ls
+ 1640  docker buildx build . -t ansible-aruba \\n--secret id=user_password,src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1641  lsattr entrypoint.sh
+ 1642  ll
+ 1643  sudo chmod +x entrypoint.sh
+ 1644  ll
+ 1645  docker buildx build . -t ansible-aruba \\n--secret id=user_password,src=./secrets/password.txt \\n--build-arg USERNAME=rikuriak
+ 1646  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  -p 22:22 \\nansible-aruba /usr/bin/zsh
+ 1647  docker images
+ 1648  sudo df -h
+ 1649  docker image ls
+ 1650  cd dev/prj-ansible/emovp/get-arp-arubas
+ 1651  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1652  ssh admemov@10.10.57.1
+ 1653  cat .ssh/config
+ 1654  sudo nvim .ssh/config
+ 1655  ansible version
+ 1656  ansible --version
+ 1657  ansible version
+ 1658  ansible --version
+ 1659  docker ps
+ 1660  docker run -it --rm \\n  --network ansigestor_macvlan \\n  --ip 172.20.1.94 \\n  --name ansiaruba \\n  -p 22:22 \\nansible-aruba /usr/bin/zsh
+ 1661  docker image ls
+ 1662  docker ps
+ 1663  htop
+ 1664  docker image ls
+ 1665  docker container ls
+ 1666  docker image ls
+ 1667  docker image rm ansible-aruba
+ 1668  docker image ls
+ 1669  ping 172.20.1.27
+ 1670  ssh rikuriak@172.20.1.27
+ 1671  0;57;53M0;57;53m
+ 1672  exit
+ 1673  cd dev/prj-ansible/emovp/get-arp-arubas
+ 1674  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1675  cd get-arp-arubas
+ 1676  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass
+ 1677  ansible-playbook -i inventory/hosts.yml playbooks/get_arp.yml --ask-vault-pass -vv
+ 1678  history | grep ansible
+ 1679  history

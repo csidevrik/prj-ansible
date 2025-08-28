@@ -1,0 +1,50 @@
+- name: Verificar y crear carpeta de certificados SSL para el dominio
+  hosts: ubuntu_servers
+  become: yes
+  # gather_facts: no
+
+  vars:
+    ruta_carpeta_cert: "/etc/ssl/certs/{{ dominio }}"
+
+  tasks:
+    - name: Verificar si la carpeta del dominio existe
+      ansible.builtin.stat:
+        path: "{{ ruta_carpeta_cert }}"
+      register: cert_dir
+
+    - name: Crear la carpeta si no existe
+      ansible.builtin.file:
+        path: "{{ ruta_carpeta_cert }}"
+        state: directory
+        mode: '0755'
+        owner: wildfly
+        group: wildfly
+      when: not cert_dir.stat.exists
+
+    - name: Informar si se creó o ya existía
+      ansible.builtin.debug:
+        msg: >
+          {{
+            '✅ Se creó la carpeta: ' + ruta_carpeta_cert
+            if not cert_dir.stat.exists
+            else '📁 La carpeta ya existía: ' + ruta_carpeta_cert
+          }}
+
+    # - name: Mostrar fecha de última modificación si la carpeta existía
+    #   ansible.builtin.debug:
+    #     msg: "📅 Última modificación: {{ cert_dir.stat.mtime | to_datetime(epoch=true) | strftime('%Y-%m-%d %H:%M:%S') }}"
+    #   when: cert_dir.stat.exists
+    # - name: Mostrar fecha de última modificación si la carpeta existía
+    #   ansible.builtin.debug:
+    #     msg: "📅 Última modificación: {{ cert_dir.stat.mtime | to_datetime(epoch=true) | strftime('%Y-%m-%d %H:%M:%S') }}"
+    #   when: cert_dir.stat.exists
+
+    - name: Convertir timestamp a fecha legible
+      ansible.builtin.set_fact:
+        fecha_modificacion: "{{ lookup('pipe', 'date -d @' ~ cert_dir.stat.mtime | int ~ ' \"+%Y-%m-%d %H:%M:%S\"') }}"
+      when: cert_dir.stat.exists
+
+    - name: Mostrar fecha de última modificación con `date`
+      ansible.builtin.debug:
+        msg: "📅 Última modificación: {{ fecha_modificacion }}"
+      when: cert_dir.stat.exists
