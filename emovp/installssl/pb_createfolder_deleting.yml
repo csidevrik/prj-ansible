@@ -1,0 +1,50 @@
+---
+- name: Create folder on Linux servers
+  hosts: ubuntu_servers
+  become: yes
+  
+  vars:
+    linux_user: "{{ ansible_user }}"  # Usará el usuario definido en el inventario
+    #linux_user: "nombre_usuario"     # O podrías especificar directamente el nombre
+    base_path: "/home/{{ linux_user }}"
+    folder_name: "SSL_FILES"
+  
+  tasks:
+    - name: Mostrar variables para debug
+      debug:
+        msg: 
+          - "Usuario: {{ linux_user }}"
+          - "Ruta base: {{ base_path }}"
+          - "Carpeta a crear: {{ base_path }}/{{ folder_name }}"
+    
+    - name: Eliminar carpeta si ya existe
+      file:
+        path: "{{ base_path }}/{{ folder_name }}"
+        state: absent
+      register: folder_deletion
+    
+    - name: Mostrar resultado de la eliminación
+      debug:
+        msg: "Carpeta eliminada (si existía): {{ base_path }}/{{ folder_name }}"
+      when: folder_deletion.changed
+    
+    - name: Crear carpeta limpia
+      file:
+        path: "{{ base_path }}/{{ folder_name }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ linux_user }}"
+        group: "{{ linux_user }}"
+      register: folder_creation
+    
+    - name: Verificar la creación de la carpeta
+      stat:
+        path: "{{ base_path }}/{{ folder_name }}"
+      register: folder_check
+    
+    - name: Mostrar resultado de la creación
+      debug:
+        msg: 
+          - "Estado de la carpeta: {{ 'Creada' if folder_check.stat.exists else 'No creada' }}"
+          - "Ruta completa: {{ base_path }}/{{ folder_name }}"
+          - "Permisos: {{ folder_check.stat.mode if folder_check.stat.exists else 'N/A' }}"

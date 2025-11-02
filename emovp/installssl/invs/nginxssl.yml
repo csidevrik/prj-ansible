@@ -1,0 +1,11 @@
+all:
+  children:
+    ubuntu_servers:
+      hosts:
+        S_MOODLE:
+          ansible_host: 172.20.1.23
+          ansible_user: "{{ vault_credentials.server1.username }}"
+          ansible_password: "{{ vault_credentials.server1.password }}"
+          ansible_connection: ssh
+          ansible_become: yes
+          ansible_python_interpreter: /usr/bin/python3

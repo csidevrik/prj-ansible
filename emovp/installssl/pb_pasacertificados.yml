@@ -28,13 +28,9 @@
         mode: "{{ file_mode }}"
       with_fileglob:
         # - "{{ local_files_path }}/*"  # Copia todos los archivos del directorio
-        - "{{ local_files_path }}/__emov_gob_ec_chain.crt"  # Copia crt chain
-        - "{{ local_files_path }}/__emov_gob_ec.ca-bundle"  # Copia ca bundle
-        - "{{ local_files_path }}/__emov_gob_ec.crt"  # Copia el crt certificado
-        - "{{ local_files_path }}/__emov_gob_ec.key"  # Copia el key certificado
-        - "{{ local_files_path }}/__emov_gob_ec.p7b"  # Copia el p7b certificado
-        - "{{ local_files_path }}/__emov_gob_ec_ca.cer"  # Copia el ca certificado
-        - "{{ local_files_path }}/__emov_gob_ec_ca-root.cer"  # Copia el ca certificado
+        - "{{ local_files_path }}/__emov_gob_ec_cer.crt"  # Copia el crt certificado
+        - "{{ local_files_path }}/__emov_gob_ec_key.key"  # Copia el key certificado
+        - "{{ local_files_path }}/__emov_gob_ec_ca.crt"  # Copia el ca certificado
       register: copy_result
     
     - name: Mostrar resultado de la transferencia
